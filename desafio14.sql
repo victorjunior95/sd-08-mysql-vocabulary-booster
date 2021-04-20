@@ -1,0 +1,8 @@
+(SELECT DISTINCT Country AS `País` FROM w3schools.customers
+ORDER BY COUNTRY
+LIMIT 5)
+UNION ALL
+(SELECT DISTINCT Country AS `País` FROM w3schools.suppliers
+ORDER BY COUNTRY
+LIMIT 5)
+LIMIT 5;
