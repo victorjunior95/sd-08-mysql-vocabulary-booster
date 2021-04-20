@@ -1,14 +1,11 @@
 SELECT 
     A.ContactName AS 'Nome',
     A.Country AS 'País',
-    (SELECT 
-            COUNT(T0.ContactName)
-        FROM
-            w3schools.customers T0
-        WHERE
-            T0.Country = A.Country
-                AND A.ContactName <> T0.ContactName) AS 'Número de compatriotas'
+    COUNT(*) AS 'Número de compatriotas'
 FROM
     w3schools.customers A
+        JOIN
+    w3schools.customers B ON A.Country = B.Country
+        AND A.CustomerID <> B.CustomerID
 GROUP BY A.ContactName , A.Country
 ORDER BY A.ContactName;
