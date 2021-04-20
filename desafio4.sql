@@ -8,4 +8,5 @@ ELSE 'CEO'
 END AS `Senioridade`
 FROM hr.jobs as J
 INNER JOIN hr.employees AS E ON J.JOB_ID = E.JOB_ID
-GROUP BY `Cargo`;
+GROUP BY `Cargo`
+ORDER BY `Média salarial`, `Cargo`;
