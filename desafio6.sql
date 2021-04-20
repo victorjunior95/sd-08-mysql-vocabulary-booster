@@ -13,4 +13,4 @@ AND
 emp.EMPLOYEE_ID = jhis.EMPLOYEE_ID
 AND
 dep.DEPARTMENT_ID = jhis.DEPARTMENT_ID
-ORDER BY 'Nome completo' DESC, Cargo;
+ORDER BY 'Nome completo' DESC, `Cargo`;
