@@ -7,5 +7,4 @@ SELECT JOB_TITLE AS 'Cargo',
       END AS 'Nível'
 FROM hr.jobs
 ORDER BY JOB_TITLE;
-
       
