@@ -1,6 +1,4 @@
 git status
-sleep 10s
 git add --all
-git commit -am "Auto push script included"
-sleep 10s
+git commit -am "FIX: Auto push script included"
 git push
