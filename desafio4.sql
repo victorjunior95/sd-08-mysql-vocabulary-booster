@@ -1,6 +1,6 @@
 SELECT 
 j.JOB_TITLE AS `Cargo`,
-ROUND(AVG(e.SALARY),2) AS `Média Salarial`,
+ROUND(AVG(e.SALARY),2) AS `Média salarial`,
 CASE
 WHEN ROUND(AVG(e.SALARY),2) >= 2000 AND ROUND(AVG(e.SALARY),2) <= 5800 THEN 'Júnior'
 WHEN ROUND(AVG(e.SALARY),2) >= 5801 AND ROUND(AVG(e.SALARY),2) <= 7500 THEN 'Pleno'
@@ -11,4 +11,4 @@ FROM hr.employees AS e
 INNER JOIN hr.jobs AS j
 ON e.JOB_ID = j.JOB_ID
 GROUP BY JOB_TITLE
-ORDER BY `Média Salarial`, `Cargo`;
+ORDER BY `Média salarial`, `Cargo`;
