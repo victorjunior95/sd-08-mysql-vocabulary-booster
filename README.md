@@ -1,4 +1,4 @@
-[X] 1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa
+- [X] 1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa
 - [X] 2 - Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo
 - [X] 3 - Exiba os cargos com a diferença entre seus salários máximo e mínimo
 - [X] 4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo
