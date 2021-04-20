@@ -2,3 +2,6 @@ node_modules/
 
 # VSCode repo settings
 .vscode
+
+# automatizador geração de arquivos
+_templates 
