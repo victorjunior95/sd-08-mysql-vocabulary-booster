@@ -11,7 +11,7 @@
 
 SELECT hrjobs.JOB_TITLE AS Cargo,
 (hrjobs.MAX_SALARY - hrjobs.MIN_SALARY) AS `Variação Salarial`,
-ROUND((hrjobs.MIN_SALARY / 12), 2) AS `Média mínica mensal`,
+ROUND((hrjobs.MIN_SALARY / 12), 2) AS `Média mínima mensal`,
 ROUND((hrjobs.MAX_SALARY / 12), 2) AS `Média máxima mensal`
 FROM hr.jobs AS hrjobs
 ORDER BY `Variação Salarial`, Cargo;
