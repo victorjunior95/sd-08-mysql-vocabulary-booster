@@ -8,5 +8,5 @@ end as Senioridade
 from hr.jobs j
 inner join hr.employees e
 on j.job_id = e.job_id
-group by j.job_title
+group by e.salary
 order by (e.salary), Cargo;
