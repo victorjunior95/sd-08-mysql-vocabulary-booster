@@ -14,9 +14,9 @@
 -- 	Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
 SELECT j.JOB_TITLE AS `Cargo`, ROUND(AVG(e.SALARY), 2) AS `Média Salarial`,
 CASE
-WHEN AVG(e.SALARY) > 1999 AND AVG(e.SALARY) < 5801 THEN "Júnior"
-WHEN AVG(e.SALARY) > 5800 AND AVG(e.SALARY) < 7501 THEN "Pleno"
-WHEN AVG(e.SALARY) > 7500 AND AVG(e.SALARY) < 10501 THEN "Sênior"
+WHEN AVG(e.SALARY) BETWEEN 2000 AND 5800 THEN "Júnior"
+WHEN AVG(e.SALARY) BETWEEN 5801 AND 7500 THEN "Pleno"
+WHEN AVG(e.SALARY) BETWEEN 7501 AND 10500 THEN "Sênior"
 ELSE "CEO"
 END AS `Senioridade`
 FROM hr.jobs AS j
