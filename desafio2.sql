@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     JOB_TITLE AS 'Cargo',
     CASE
         WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
@@ -9,4 +9,3 @@ SELECT
 FROM
     hr.jobs
 ORDER BY JOB_TITLE ASC;
- 
