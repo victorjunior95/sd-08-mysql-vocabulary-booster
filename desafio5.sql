@@ -1,7 +1,3 @@
-SELECT * FROM hr.jobs;
-
-SELECT * FROM hr.employees;
-
 SELECT job_title AS 'Cargo',
 max_salary - min_salary AS 'Variação Salarial',
 ROUND(AVG(min_salary/12), 2) AS 'Média mínima mensal',
