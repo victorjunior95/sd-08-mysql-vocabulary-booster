@@ -1,9 +1,8 @@
-SET @media_salarial = ROUND(MAX_SALARY - MIN_SALARY, 2);
-SELECT JOB_TITLE AS 'Cargo', @media_salarial AS 'Média Salarial',
+SELECT JOB_TITLE AS 'Cargo', ROUND(((MAX_SALARY + MIN_SALARY)/2),2) AS 'Média Salarial',
   CASE
-    WHEN @media_salarial >= 2000 AND @media_salarial <= 5800 THEN 'Júnior'
-    WHEN @media_salarial >= 5801 AND @media_salarial <= 7500 THEN 'Pleno'
-    WHEN @media_salarial >= 7501 AND @media_salarial <= 10500 THEN 'Sênior'
+    WHEN ROUND(((MAX_SALARY + MIN_SALARY)/2),2) >= 2000 AND ROUND(((MAX_SALARY + MIN_SALARY)/2),2) <= 5800 THEN 'Júnior'
+    WHEN ROUND(((MAX_SALARY + MIN_SALARY)/2),2) >= 5801 AND ROUND(((MAX_SALARY + MIN_SALARY)/2),2) <= 7500 THEN 'Pleno'
+    WHEN ROUND(((MAX_SALARY + MIN_SALARY)/2),2) >= 7501 AND ROUND(((MAX_SALARY + MIN_SALARY)/2),2) <= 10500 THEN 'Sênior'
     ELSE 'CEO'
   END AS 'Senioridade'
-FROM hr.jobs ORDER BY @media_salarial, JOB_TITLE;
+FROM hr.jobs ORDER BY ((MAX_SALARY + MIN_SALARY)/2), JOB_TITLE;
