@@ -11,11 +11,11 @@
 -- Os resultados devem estar ordenados pelo nome do cargo em ordem alfabética.
 
 SELECT JOB_TITLE AS Cargo, 
-	CASE
-    WHEN hrjobs.MAX_SALARY > 5000 AND hrjobs.MAX_SALARY <= 10000 THEN "Baixo"
-    WHEN hrjobs.MAX_SALARY > 10001 AND hrjobs.MAX_SALARY <= 20000 THEN "Médio"
-    WHEN hrjobs.MAX_SALARY > 20001 AND hrjobs.MAX_SALARY <= 30000 THEN "Alto"
-    WHEN hrjobs.MAX_SALARY > 30000 THEN "Altíssimo"
-	END AS Nível
+CASE
+WHEN hrjobs.MAX_SALARY > 5000 AND hrjobs.MAX_SALARY <= 10000 THEN "Baixo"
+WHEN hrjobs.MAX_SALARY > 10001 AND hrjobs.MAX_SALARY <= 20000 THEN "Médio"
+WHEN hrjobs.MAX_SALARY > 20001 AND hrjobs.MAX_SALARY <= 30000 THEN "Alto"
+WHEN hrjobs.MAX_SALARY > 30000 THEN "Altíssimo"
+END AS Nível
 FROM hr.jobs AS hrjobs
 ORDER BY Cargo;
