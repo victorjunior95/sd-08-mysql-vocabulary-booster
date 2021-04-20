@@ -1,6 +1,6 @@
 select j.job_title as 'Cargo', round(avg(e.salary), 2) as `Média salarial`,
 case 
-when e.salary between 1999 and 5800 then 'Júnior'
+when e.salary between 2000 and 5800 then 'Júnior'
 when e.salary between 5801 and 7500 then 'Pleno'
 when e.salary between 7501 and 10500 then 'Sênior'
 else 'CEO'
