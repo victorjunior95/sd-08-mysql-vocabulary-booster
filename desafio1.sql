@@ -1,0 +1,1 @@
+select desafio1 from vocabulary.booster;
