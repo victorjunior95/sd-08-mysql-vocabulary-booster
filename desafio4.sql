@@ -12,18 +12,14 @@
 -- 	Sempre que fizer uso da média salarial, arredonde o valor para 02 casas decimais.
 -- 	Os resultados devem estar ordenados pela média salarial em ordem crescente.
 -- 	Em caso de empate na média, os resultados devem ser ordenados pelo nome do cargo em ordem alfabética.
--- SELECT
--- 	j.JOB_TITLE AS `Cargo`,
--- 	ROUND(AVG(e.SALARY), 2) AS `Média Salarial`,
---     CASE
--- 		WHEN AVG(e.SALARY) > 1999 AND AVG(e.SALARY) < 5801 THEN "Júnior"
---         WHEN AVG(e.SALARY) > 5800 AND AVG(e.SALARY) < 7501 THEN "Pleno"
---         WHEN AVG(e.SALARY) > 7500 AND AVG(e.SALARY) < 10501 THEN "Sênior"
---         ELSE "CEO"
---     END AS `Senioridade`
--- FROM
--- 	hr.jobs AS j
--- 		INNER JOIN
--- 	hr.employees AS e ON j.JOB_ID = e.JOB_ID
--- GROUP BY e.JOB_ID
--- ORDER BY `Média Salarial`, `Cargo`;
+SELECT j.JOB_TITLE AS `Cargo`, ROUND(AVG(e.SALARY), 2) AS `Média Salarial`,
+CASE
+WHEN AVG(e.SALARY) > 1999 AND AVG(e.SALARY) < 5801 THEN "Júnior"
+WHEN AVG(e.SALARY) > 5800 AND AVG(e.SALARY) < 7501 THEN "Pleno"
+WHEN AVG(e.SALARY) > 7500 AND AVG(e.SALARY) < 10501 THEN "Sênior"
+ELSE "CEO"
+END AS `Senioridade`
+FROM hr.jobs AS j
+INNER JOIN hr.employees AS e ON j.JOB_ID = e.JOB_ID
+GROUP BY e.JOB_ID
+ORDER BY `Média Salarial`, `Cargo`;
