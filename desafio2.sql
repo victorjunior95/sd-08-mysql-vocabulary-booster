@@ -7,4 +7,4 @@ SELECT JOB_TITLE AS 'Cargo',
 		WHEN MAX_SALARY > 30000 THEN 'Altíssimo'
 		ELSE 'Fora da faixa'
 	END
- AS 'Nível' FROM hr.jobs;
+ AS 'Nível' FROM hr.jobs ORDER BY JOB_TITLE;
