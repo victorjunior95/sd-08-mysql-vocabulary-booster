@@ -1,11 +1,13 @@
-SELECT job_title AS Cargo, 
-ROUND(((MIN_SALARY + MAX_SALARY) / 2), 2) AS `Média Salarial`,
+SELECT j.job_title AS Cargo, 
+ROUND(AVG(e.salary), 2) AS `Média salarial`,
 CASE
-WHEN ((MIN_SALARY + MAX_SALARY) / 2) >= 2000 AND ((MIN_SALARY + MAX_SALARY) / 2) <= 5800 THEN 'Junior'
-WHEN ((MIN_SALARY + MAX_SALARY) / 2) >= 5801 AND ((MIN_SALARY + MAX_SALARY) / 2) <= 7500 THEN 'Pleno'
-WHEN ((MIN_SALARY + MAX_SALARY) / 2) >= 7501 AND ((MIN_SALARY + MAX_SALARY) / 2) <= 10500 THEN 'Sênior'
-WHEN ((MIN_SALARY + MAX_SALARY) / 2) > 10500 THEN 'CEO'
+WHEN ROUND(AVG(e.salary)) >= 2000 AND AVG(e.salary) <= 5800 THEN 'Júnior'
+WHEN ROUND(AVG(e.salary)) >= 5801 AND AVG(e.salary) <= 7500 THEN 'Pleno'
+WHEN ROUND(AVG(e.salary)) >= 7501 AND AVG(e.salary) <= 10500 THEN 'Sênior'
+WHEN ROUND(AVG(e.salary)) > 10500 THEN 'CEO'
 END AS Senioridade
-FROM hr.jobs
-GROUP BY Cargo
-ORDER BY `Média Salarial`, Cargo ASC;
+FROM hr.employees AS e
+INNER JOIN hr.jobs AS j
+ON e.job_id = j.job_id
+GROUP BY e.job_id
+ORDER BY `Média Salarial`, job_title;
