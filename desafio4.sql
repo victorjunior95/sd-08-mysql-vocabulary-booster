@@ -7,4 +7,5 @@ CASE
 	WHEN ((MIN_SALARY + MAX_SALARY) / 2) > 10500 THEN 'CEO'
 END AS Senioridade
 FROM hr.jobs
-ORDER BY `Média Salarial`, Cargo;
+GROUP BY Cargo
+ORDER BY `Média Salarial`, Cargo ASC;
