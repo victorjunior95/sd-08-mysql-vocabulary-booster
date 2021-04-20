@@ -8,5 +8,5 @@ END AS `Senioridade`
 FROM hr.jobs AS J
 INNER JOIN hr.employees AS E
 ON J.JOB_ID = E.JOB_ID
-GROUP BY J.JOB_TITLE
-ORDER BY `Média salarial` ASC, JOB_TITLE ASC;
+GROUP BY Cargo
+ORDER BY `Média salarial`, Cargo;
