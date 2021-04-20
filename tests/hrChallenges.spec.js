@@ -26,7 +26,7 @@ describe('Desafios iniciais', () => {
   });
 
   afterAll(async () => {
-    await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
+    // await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
 
     sequelize.close();
   });
