@@ -8,5 +8,5 @@ FROM
         INNER JOIN
     w3schools.order_details AS OD ON P.ProductID = OD.ProductID
 GROUP BY P.ProductID
-HAVING `Média` > 20
-ORDER BY `Média`, Produto;
+HAVING Média > 20
+ORDER BY Média , Produto;
