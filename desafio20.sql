@@ -12,6 +12,6 @@ ON d.DEPARTMENT_ID = jh.DEPARTMENT_ID
 INNER JOIN hr.jobs AS j
 ON j.JOB_ID = jh.JOB_ID
 WHERE e.Email = email
-ORDER BY Department_Name;
+ORDER BY Department_Name, Job_title;
 END $$
 DELIMITER ;
