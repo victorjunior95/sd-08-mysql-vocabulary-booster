@@ -15,8 +15,8 @@ SELECT
             d.DEPARTMENT_ID = e.DEPARTMENT_ID) AS Departamento
 FROM
     hr.employees e
-    INNER JOIN 
-		hr.job_history AS jh
-	ON 
-		e.employee_id = jh.employee_id 
+        INNER JOIN
+    hr.job_history jh 
+		ON 
+	e.employee_id = jh.employee_id
 ORDER BY `Nome completo` DESC , Cargo;
