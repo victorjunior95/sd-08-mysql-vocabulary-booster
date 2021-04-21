@@ -1,10 +1,12 @@
 select concat(e.first_name,' ', e.last_name) as `Nome completo`,
 j.job_title as `Cargo`,
-e.hire_date as `Data de início do cargo`,
+jh.start_date as `Data de início do cargo`,
 dpt.department_name as `Departamento`
-from employees e
-inner join jobs j
-on e.job_id = j.job_id
-inner join departments dpt
-on dpt.department_id = e.department_id
+from hr.employees e
+inner join hr.job_history jh
+on e.employee_id = jh.employee_id
+inner join hr.jobs j
+on jh.job_id = j.job_id
+inner join hr.departments dpt
+on jh.department_id = dpt.department_id
 order by `Nome completo` ASC, `Cargo`; 
