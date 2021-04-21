@@ -10,4 +10,3 @@ FROM
     w3schools.orders o
 GROUP BY `Nome completo`
 ORDER BY `Total de pedidos`;
- 

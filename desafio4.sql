@@ -1,4 +1,6 @@
-SELECT j.JOB_TITLE AS Cargo, ROUND(AVG(e.SALARY), 2) AS `Média salarial`,
+SELECT 
+    j.JOB_TITLE AS Cargo,
+    ROUND(AVG(e.SALARY), 2) AS `Média salarial`,
     CASE
         WHEN
             AVG(e.SALARY) >= 2000
@@ -17,7 +19,8 @@ SELECT j.JOB_TITLE AS Cargo, ROUND(AVG(e.SALARY), 2) AS `Média salarial`,
             'Sênior'
         ELSE 'CEO'
     END AS `Senioridade`
- FROM hr.employees e
- LEFT JOIN hr.jobs j
- ON j.JOB_ID = e.JOB_ID
+FROM
+    hr.employees e
+        LEFT JOIN
+    hr.jobs j ON j.JOB_ID = e.JOB_ID
 GROUP BY e.JOB_ID;
