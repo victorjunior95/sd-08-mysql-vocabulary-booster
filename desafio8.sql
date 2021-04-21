@@ -6,5 +6,5 @@ INNER JOIN w3schools.orders AS o
 ON o.CustomerID = c.CustomerID
 INNER JOIN w3schools.shippers AS sh
 ON sh.ShipperID = o.ShipperID
-WHERE sh.ShipperName = 'Speedy Express' OR sh.ShipperName = 'United Package'
+WHERE sh.ShipperID IN (1 , 2)
 ORDER BY c.ContactName, sh.ShipperName;
