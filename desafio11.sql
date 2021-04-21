@@ -5,4 +5,5 @@ SELECT
 FROM w3schools.customers AS c1, w3schools.customers AS c2
 WHERE c1.Country = c2.Country
 GROUP BY c2.CustomerID
+HAVING COUNT(*) > 1
 ORDER BY `Nome`;
