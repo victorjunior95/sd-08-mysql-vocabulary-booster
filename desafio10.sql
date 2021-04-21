@@ -6,4 +6,5 @@ FROM w3schools.products AS wp
 INNER JOIN w3schools.order_details AS wod
 ON wp.ProductID = wod.ProductID
 GROUP BY `Produto`
+HAVING `Média` > 20
 ORDER BY `Média`, `Produto`;
