@@ -1,0 +1,11 @@
+DELIMITER $$
+CREATE TRIGGER ordersInsert
+BEFORE INSERT ON w3schools.orders
+FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = NOW(),
+NEW.CustomerID = 'INSERT',
+NEW.EmployeeID = 'INSERT',
+NEW.ShipperID = 'INSERT';
+END $$
+DELIMITER ;
