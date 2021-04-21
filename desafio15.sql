@@ -6,8 +6,7 @@ BEGIN
     FROM hr.employees AS E
     INNER JOIN hr.jobs AS J 
     ON J.JOB_ID = E.JOB_ID 
-    AND J.JOB_TITLE = job
-    GROUP BY E.JOB_ID;
+    AND J.JOB_TITLE = job;
 END $$
 
 DELIMITER ;
