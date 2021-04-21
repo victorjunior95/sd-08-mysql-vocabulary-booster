@@ -9,5 +9,5 @@ SELECT
     END AS 'Nível'
 FROM
     hr.jobs AS job
-ORDER BY JOB_TITLE
+ORDER BY job.JOB_TITLE
 ;
