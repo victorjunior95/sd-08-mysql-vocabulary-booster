@@ -1,6 +1,6 @@
 SELECT 
     tb_cust.ContactName AS 'Nome de contato',
-    tb_shp.ShipperName,
+    tb_shp.ShipperName AS 'Empresa que fez o envio',
     tb_ord.OrderDate AS 'Data do pedido'
 FROM
     w3schools.customers AS tb_cust
