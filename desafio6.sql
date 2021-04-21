@@ -1,5 +1,6 @@
 -- SELECT * FROM hr.departments;
 -- SELECT * FROM hr.job_history;
+-- Errado
 
 SELECT
 CONCAT(employee.FIRST_NAME, ' ', employee.LAST_NAME) AS `Nome completo`,
