@@ -6,4 +6,5 @@ SELECT
 FROM
     hr.countries c
         LEFT JOIN
-    hr.regions h ON c.REGION_ID = h.REGION_ID;
+    hr.regions h ON c.REGION_ID = h.REGION_ID
+    ORDER BY País;

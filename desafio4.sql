@@ -11,7 +11,7 @@ SELECT
             AVG(e.SALARY) > 5800
                 AND AVG(e.SALARY) <= 7500
         THEN
-            'Médio'
+            'Pleno'
         WHEN
             AVG(e.SALARY) > 7500
                 AND AVG(e.SALARY) <= 10500

@@ -5,7 +5,7 @@ SELECT
         FROM
             hr.jobs j
         WHERE
-            j.JOB_ID = e.JOB_ID) AS Cargo,
+            j.JOB_ID = jh.JOB_ID) AS Cargo,
     jh.START_DATE AS `Data de início do cargo`,
     (SELECT 
             d.DEPARTMENT_NAME
