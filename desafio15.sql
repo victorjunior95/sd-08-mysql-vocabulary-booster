@@ -12,5 +12,3 @@ HAVING j.JOB_title = cargo;
 END
 
 $$ DELIMITER ;
-
-
