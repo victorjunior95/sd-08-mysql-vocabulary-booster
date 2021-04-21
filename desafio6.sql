@@ -6,6 +6,3 @@ INNER JOIN hr.jobs b ON a.job_id = b.job_id
 INNER JOIN hr.departments c ON a.department_id = c.department_id 
 INNER JOIN hr.job_history d ON c.DEPARTMENT_ID = d.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, `Cargo` ASC;
-
-
-
