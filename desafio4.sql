@@ -11,8 +11,7 @@ SELECT
 FROM
     hr.jobs AS job
         INNER JOIN
-    employees AS emp
-    ON emp.JOB_ID = job.JOB_ID
-    GROUP BY  job.JOB_TITLE
+    employees AS emp ON emp.JOB_ID = job.JOB_ID
+GROUP BY job.JOB_TITLE
 ORDER BY `Média Salarial` , job.JOB_TITLE
 ;
