@@ -1,6 +1,6 @@
 USE hr;
-DELIMITER $$
 
+DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario (
   employeeEmail VARCHAR(25)
 )
@@ -16,8 +16,7 @@ FROM
 WHERE
     EMAIL = employeeEmail INTO result;
   RETURN result;
-END
-
-$$ DELIMITER ;
+END $$ 
+DELIMITER ;
 
 -- SELECT hr.buscar_quantidade_de_empregos_por_funcionario('NKOCHHAR'); OK!
