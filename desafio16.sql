@@ -5,7 +5,7 @@ DELIMITER $$
     BEGIN
       DECLARE quantidade_empregos INT;
       SELECT 
-	  COUNT(e.EMPLOYEE_ID)
+      COUNT(e.EMPLOYEE_ID)
       FROM employees AS e
       RIGHT JOIN job_history AS jh
       ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
