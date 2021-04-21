@@ -9,4 +9,4 @@ inner join hr.jobs j
 on jh.job_id = j.job_id
 inner join hr.departments dpt
 on jh.department_id = dpt.department_id
-order by `Nome completo` ASC, `Cargo`; 
+order by `Nome completo` DESC, `Cargo`; 
