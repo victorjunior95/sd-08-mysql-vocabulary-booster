@@ -8,5 +8,4 @@ INNER JOIN hr.employees AS e
 ON j.JOB_ID = e.JOB_ID
 INNER JOIN hr.departments AS d
 ON e.DEPARTMENT_ID = d.DEPARTMENT_ID
-GROUP BY e.JOB_ID
 ORDER BY `Nome completo` DESC, `Cargo` ASC;
