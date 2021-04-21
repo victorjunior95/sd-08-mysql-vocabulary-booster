@@ -6,4 +6,5 @@ employee.SALARY AS "Salário"
 FROM hr.employees AS employee
 INNER JOIN hr.job_history AS jhistory
 ON employee.EMPLOYEE_ID = jhistory.EMPLOYEE_ID
+WHERE MONTH(jhistory.START_DATE) BETWEEN 01 AND 12
 ORDER BY `Nome Completo`;
