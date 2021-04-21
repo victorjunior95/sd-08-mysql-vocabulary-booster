@@ -1,8 +1,8 @@
-SELECT Country 
+SELECT Country AS `País`
 FROM w3schools.customers
 UNION
-SELECT Country
+SELECT Country AS `País`
 FROM w3schools.suppliers
-GROUP BY Country
-ORDER BY Country
+GROUP BY `País` 
+ORDER BY `País`
 LIMIT 5;
