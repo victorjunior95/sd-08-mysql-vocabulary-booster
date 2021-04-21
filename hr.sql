@@ -221,8 +221,3 @@ INSERT INTO `regions` VALUES (1,'Europe'),(2,'Americas'),(3,'Asia'),(4,'Middle E
 UNLOCK TABLES;
 
 /* WRITE YOUR QUERY HERE */
-
-
-SELECT COUNT(DISTINCT job_id)
-FROM employees;
-
