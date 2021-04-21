@@ -3,6 +3,6 @@ jh.start_date as `Data de início`,
 e.salary as `Salário`
 from hr.employees e
 inner join hr.job_history jh
-on e.job_id = jh.job_id
+on e.employee_id = jh.employee_id
 where month(jh.start_date) in (01,02,03)
 order by `Nome Completo`, `Data de início`;
