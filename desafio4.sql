@@ -9,4 +9,4 @@ from hr.jobs j
 inner join hr.employees e
 on j.job_id = e.job_id
 group by Cargo
-order by `Mádia Salarial`, Cargo;
+order by `Média salarial`, Cargo;
