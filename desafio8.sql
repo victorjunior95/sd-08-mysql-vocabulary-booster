@@ -1,14 +1,13 @@
 SELECT 
-cus.ContactName AS `Nome de contato`,
-shi.ShipperName AS `Empresa que fez o envio`,
-ord.OrderDate AS `Data do pedido`
+prod.ProductName AS `Produto`,
+MIN(odet.Quantity) AS `Mínima`,
+MAX(odet.Quantity) AS `Máxima`,
+ROUND(AVG(odet.Quantity), 2) AS `Média`
 FROM
-w3schools.customers AS cus,
-w3schools.shippers AS shi,
-w3schools.orders AS ord
+w3schools.order_details AS odet,
+w3schools.products AS prod
 WHERE
-cus.CustomerID = ord.CustomerID
-AND
-ord.ShipperID = shi.ShipperID
-AND shi.ShipperName in ("Speedy Express", "United Package")
-ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
+odet.ProductID = prod.ProductID
+GROUP BY `Produto`
+HAVING `Média` > 20
+ORDER BY `Média`, `Produto`;
