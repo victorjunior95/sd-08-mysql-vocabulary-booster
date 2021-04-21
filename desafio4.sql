@@ -2,10 +2,10 @@ SELECT
 c.Cargo,
 c.`Média salarial`,
 CASE
-	WHEN `Média salarial` > 10500 THEN 'CEO'
-	WHEN `Média salarial` > 7500 THEN 'Sênior'
-	WHEN `Média salarial` > 5800 THEN 'Pleno'
-	ELSE 'Júnior'
+WHEN `Média salarial` > 10500 THEN 'CEO'
+WHEN `Média salarial` > 7500 THEN 'Sênior'
+WHEN `Média salarial` > 5800 THEN 'Pleno'
+ELSE 'Júnior'
 END AS Senioridade
 FROM (
 SELECT
