@@ -10,5 +10,5 @@ FROM
     jobs AS job ON job.JOB_ID = emp.JOB_ID
         INNER JOIN
     departments AS dep ON emp.DEPARTMENT_ID = dep.DEPARTMENT_ID
-ORDER BY `Nome Completo` , job.JOB_TITLE	
+ORDER BY `Nome Completo` DESC, job.JOB_TITLE	
 ; 
