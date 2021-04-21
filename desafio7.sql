@@ -5,9 +5,9 @@ e.SALARY AS `Salário`
 FROM hr.employees AS e
 INNER JOIN hr.job_history as jh
 ON e.EMPLOYEE_ID = jh.EMPLOYEE_ID
-WHERE MONTH(jh.START_DATE) BETWEEN 1 AND 3
+WHERE MONTH(jh.START_DATE) IN(1, 2, 3) -- BETWEEN 1 AND 3 
 ORDER BY `Nome completo`, `Data de início`;
 
-SELECT jh.START_DATE AS `Data de início` 
-FROM hr.job_history AS jh
-WHERE MONTH(jh.START_DATE) BETWEEN 1 AND 3;
+-- SELECT jh.START_DATE AS `Data de início` 
+-- FROM hr.job_history AS jh
+-- WHERE MONTH(jh.START_DATE) BETWEEN 1 AND 3;
