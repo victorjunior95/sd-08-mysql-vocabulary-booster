@@ -20,4 +20,3 @@ o.EmployeeID
 FROM w3schools.orders AS o
 INNER JOIN w3schools.order_details AS od
 ON o.OrderID = od.OrderID;
-
