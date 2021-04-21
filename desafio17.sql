@@ -1,0 +1,11 @@
+USE w3schools;
+DELIMITER $$
+
+CREATE TRIGGER Atualiza_Tabela_Orders
+BEFORE INSERT ON orders
+FOR EACH ROW
+BEGIN
+	SET NEW.OrderDate = NOW();
+END
+
+DELIMITER $$ ;
