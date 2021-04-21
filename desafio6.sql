@@ -12,7 +12,7 @@ SELECT
         FROM
             hr.departments d
         WHERE
-            d.DEPARTMENT_ID = e.DEPARTMENT_ID) AS Departamento
+            d.DEPARTMENT_ID = jh.DEPARTMENT_ID) AS Departamento
 FROM
     hr.employees e
         INNER JOIN
