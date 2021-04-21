@@ -10,4 +10,5 @@ WHERE
 cus.CustomerID = ord.CustomerID
 AND
 ord.ShipperID = shi.ShipperID
+AND shi.ShipperName in ("Speedy Express", "United Package")
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
