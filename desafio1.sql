@@ -1,8 +1,8 @@
 SELECT 
-    COUNTRY_NAME,
+    COUNTRY_NAME AS País,
     IF(h.REGION_NAME = 'Europe',
         'incluído',
-        'não incluído')
+        'não incluído') AS `Status Inclusão`
 FROM
     hr.countries c
         LEFT JOIN

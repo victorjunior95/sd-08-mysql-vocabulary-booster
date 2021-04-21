@@ -6,7 +6,7 @@ SELECT
             hr.jobs j
         WHERE
             j.JOB_ID = e.JOB_ID) AS Cargo,
-    HIRE_DATE AS `Data de início do cargo`,
+    jh.START_DATE AS `Data de início do cargo`,
     (SELECT 
             d.DEPARTMENT_NAME
         FROM
@@ -15,4 +15,8 @@ SELECT
             d.DEPARTMENT_ID = e.DEPARTMENT_ID) AS Departamento
 FROM
     hr.employees e
+    INNER JOIN 
+		hr.job_history AS jh
+	ON 
+		e.employee_id = jh.employee_id 
 ORDER BY `Nome completo` DESC , Cargo;

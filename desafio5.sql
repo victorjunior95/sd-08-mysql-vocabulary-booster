@@ -1,8 +1,8 @@
 SELECT 
     j.JOB_TITLE AS Cargo,
     MAX_SALARY - MIN_SALARY AS `Variação Salarial`,
-    ROUND(MIN(e.SALARY), 2) AS `Média mínima mensal`,
-    ROUND(MAX(e.SALARY), 2) AS `Média máxima mensal`
+    ROUND(j.MIN_SALARY/12, 2) AS `Média mínima mensal`,
+    ROUND(j.MAX_SALARY/12, 2) AS `Média máxima mensal`
 FROM
     hr.employees e
         LEFT JOIN

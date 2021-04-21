@@ -23,4 +23,5 @@ FROM
     hr.employees e
         LEFT JOIN
     hr.jobs j ON j.JOB_ID = e.JOB_ID
-GROUP BY e.JOB_ID;
+GROUP BY e.JOB_ID
+ORDER BY `Média salarial` , Cargo;
