@@ -4,4 +4,3 @@ AVG(Quantity) AS `Média` FROM w3schools.order_details GROUP BY ProductID
 ) AS M
 INNER JOIN w3schools.products AS P ON P.ProductID = M.ProductID
 WHERE `Média` > 20 ORDER BY `Média`, P.ProductName;
-
