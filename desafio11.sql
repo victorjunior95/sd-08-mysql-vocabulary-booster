@@ -1,5 +1,5 @@
 WITH co AS (
-		SELECT 
+SELECT 
     c2.Country, COUNT(*) AS Total
 FROM
     w3schools.customers AS c2
