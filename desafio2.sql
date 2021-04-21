@@ -5,4 +5,5 @@ WHEN MAX_SALARY > 20000 THEN 'Alto'
 WHEN MAX_SALARY > 10000 THEN 'Médio'
 ELSE 'Baixo'
 END AS 'Nível'
-FROM hr.jobs;
+FROM hr.jobs
+ORDER BY Cargo;
