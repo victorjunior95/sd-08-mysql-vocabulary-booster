@@ -9,4 +9,3 @@ from hr.jobs as jobs
 inner join hr.employees as emp 
 on jobs.JOB_ID = emp.JOB_ID
 group by CARGO order by `Média salarial`, jobs.JOB_TITLE;
-
