@@ -10,4 +10,3 @@ ON jhistory.EMPLOYEE_ID = employee.EMPLOYEE_ID
 INNER JOIN hr.departments department
 ON jhistory.DEPARTMENT_ID = department.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, job.JOB_TITLE;
-
