@@ -1,4 +1,4 @@
-select concat(e.first_name, ' ', e.last_name) as `Nome completo`,
+select concat(e.first_name,' ', e.last_name) as `Nome completo`,
 j.job_title as `Cargo`,
 e.hire_date as `Data de início do cargo`,
 dpt.department_name as `Departamento`
