@@ -1,6 +1,6 @@
 select concat(ucase(e.first_name),' ', ucase(e.last_name)) as `Nome completo`,
 jh.start_date as `Data de início`,
-salary as `Salário`
+e.salary as `Salário`
 from hr.employees e
 inner join hr.job_history jh
 on e.job_id = jh.job_id
