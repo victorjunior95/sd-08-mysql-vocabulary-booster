@@ -9,7 +9,7 @@
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem decrescente.
 -- Em caso de empate no nome completo, ordene os resultados pelo nome do cargo em ordem alfabética.
 
-SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome Completo`,
+SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
 hrjobs.JOB_TITLE AS Cargo,
 hrjobhist.START_DATE AS `Data de início do cargo`,
 hrdep.DEPARTMENT_NAME AS `Departamento`
