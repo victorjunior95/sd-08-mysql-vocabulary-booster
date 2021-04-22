@@ -1,0 +1,13 @@
+DELIMITER $$
+
+CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(MES INT, ANO INT)
+RETURNS INT READS SQL DATA
+BEGIN
+RETURN(
+SELECT COUNT(*) 
+FROM hr.employees A
+WHERE MONTH(A.HIRE_DATE) = MES AND YEAR(A.HIRE_DATE) = ANO
+);
+END
+
+$$ DELIMITER ;
