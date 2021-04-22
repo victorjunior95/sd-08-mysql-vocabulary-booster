@@ -11,4 +11,4 @@ FROM
 WHERE
     S.ShipperName = 'Speedy Express'
         OR S.ShipperName = 'United Package'
-ORDER BY `Nome de contato` , S.ShipperName
+ORDER BY 1,2,3;
