@@ -14,6 +14,8 @@
 -- A terceira deve possuir o alias "Número de compatriotas" e exibir o número de pessoas que moram no mesmo país.
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
 
+-- Reference: https://dba.stackexchange.com/questions/130505/count-instances-of-value-from-one-column-in-another-column-located-in-another-ta
+
 SELECT w3cus1.ContactName AS Nome,
 w3cus1.Country AS País,
 w3cus2.Patriota AS `Número de compatriotas`
