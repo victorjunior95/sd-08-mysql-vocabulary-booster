@@ -6,7 +6,7 @@ SELECT
   CONCAT(
     IF(DAY(jh.END_DATE) <= 9, CONCAT(0, DAY(jh.END_DATE)), DAY(jh.END_DATE)),
     '/', IF(MONTH(jh.END_DATE) <= 9, CONCAT(0, MONTH(jh.END_DATE)), MONTH(jh.END_DATE)),
-    '/', YEAR(jh.END_DATE)) AS `Data de recisão`,
+    '/', YEAR(jh.END_DATE)) AS `Data de rescisão`,
   ROUND((YEAR(jh.END_DATE) + MONTH(jh.END_DATE)/12 + DAY(jh.END_DATE)/365) -
   (YEAR(jh.START_DATE) + MONTH(jh.START_DATE)/12 + DAY(jh.START_DATE)/365), 2) AS `Anos trabalhados`
 FROM hr.employees AS e
