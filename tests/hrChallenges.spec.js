@@ -62,7 +62,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe.only("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
+  describe("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
     it("Verifica o desafio 4", async () => {
       const challengeQuery = readFileSync("desafio4.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult4");
@@ -95,7 +95,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe("7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março", () => {
+  describe.only("7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março", () => {
     it("Verifica o desafio 7", async () => {
       const challengeQuery = readFileSync("desafio7.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult7");
