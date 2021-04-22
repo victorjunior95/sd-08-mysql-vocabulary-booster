@@ -8,4 +8,4 @@ ON orders.CustomerID = customers.CustomerID
 INNER JOIN w3schools.shippers AS `shippers`
 ON orders.ShipperID = shippers.ShipperID
 WHERE shippers.ShipperName IN ('Speedy Express', 'United Package')
-ORDER BY `Nome do contato`, `Empresa que fez o envio`, DATE(`Data do pedido`);
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, DATE(`Data do pedido`);
