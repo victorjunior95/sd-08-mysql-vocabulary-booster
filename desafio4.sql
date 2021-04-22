@@ -11,4 +11,3 @@ INNER JOIN hr.jobs AS jobs
 ON jobs.JOB_ID = emp.JOB_ID
 GROUP BY jobs.JOB_TITLE
 ORDER BY ROUND(AVG(emp.SALARY), 2), jobs.JOB_TITLE;
-
