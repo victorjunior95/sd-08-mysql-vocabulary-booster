@@ -22,5 +22,5 @@ CONCAT(hremp2.FIRST_NAME, ' ', hremp2.LAST_NAME) AS `Nome completo funcionário 
 hremp2.SALARY AS `Salário funcionário 2`,
 hremp2.PHONE_NUMBER AS `Telefone funcionário 2`
 FROM hr.employees AS hremp, hr.employees AS hremp2
-WHERE hremp2.JOB_ID = hremp.JOB_ID
+WHERE hremp2.JOB_ID = hremp.JOB_ID AND hremp.EMPLOYEE_ID != hremp2.EMPLOYEE_ID
 ORDER BY `Nome completo funcionário 1`, `Nome completo funcionário 2`;
