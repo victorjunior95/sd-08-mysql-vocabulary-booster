@@ -6,7 +6,7 @@ BEGIN
 DECLARE quantidade_de_empregos INT;
 SELECT COUNT(*) FROM hr.employees AS E
     INNER JOIN hr.job_history AS JH ON E.EMPLOYEE_ID = JH.EMPLOYEE_ID
-    WHERE E.EMAIL = 'NKOCHHAR'
+    WHERE E.EMAIL = email
     INTO quantidade_de_empregos;
     RETURN quantidade_de_empregos;
 END $$
