@@ -135,7 +135,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.skip('18 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas**, mostrando as datas de início e de saída, assim como os anos que ela ficou nesse cargo', () => {
+  describe('18 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas**, mostrando as datas de início e de saída, assim como os anos que ela ficou nesse cargo', () => {
     it('Verifica o desafio 18', async () => {
       const challengeQuery = readFileSync('desafio18.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult18');
