@@ -95,7 +95,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe.only("7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março", () => {
+  describe("7 - Faça um relatório que mostra o **histórico de cargos das pessoas empregadas** que iniciaram seus cargos nos meses de janeiro, fevereiro ou março", () => {
     it("Verifica o desafio 7", async () => {
       const challengeQuery = readFileSync("desafio7.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult7");
@@ -106,7 +106,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe("12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**", () => {
+  describe.only("12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**", () => {
     it("Verifica o desafio 12", async () => {
       const challengeQuery = readFileSync("desafio12.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult12");
