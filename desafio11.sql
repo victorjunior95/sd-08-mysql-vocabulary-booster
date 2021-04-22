@@ -8,7 +8,7 @@ SELECT
   AS `Número de compatriotas`
 FROM w3schools.customers AS `customers`
 WHERE  
- (SELECT
+  (SELECT
     Count(Country)
   FROM w3schools.customers AS `compatriots`
   WHERE customers.Country = compatriots.Country) - 1 <> 0
