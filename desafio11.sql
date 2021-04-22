@@ -2,7 +2,7 @@ SELECT * FROM w3schools.customers;
 SELECT
 t1.ContactName AS "Nome",
 t1.Country AS "País",
-COUNT(*) AS `Número de compatriotas` -- Não pode contar a pessoa!
+COUNT(t2.ContactName) AS `Número de compatriotas` -- Não pode contar a pessoa!
 FROM  w3schools.customers AS t1, w3schools.customers AS t2
 WHERE t1.Country = t2.Country
 AND t1.ContactName <> t2.ContactName
