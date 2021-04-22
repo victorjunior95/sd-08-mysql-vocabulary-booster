@@ -9,4 +9,3 @@ ON products.ProductID = order_details.ProductID
 GROUP BY `Produto`
 HAVING `Média` > 20.00
 ORDER BY `Média`, `Produto`;
-  
