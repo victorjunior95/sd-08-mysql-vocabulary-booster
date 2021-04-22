@@ -3,5 +3,3 @@ USE hr;
 DELIMITER $$ CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(35)) BEGIN SELECT AVG(e.SALARY) AS 'Média salarial' FROM hr.employees AS e GROUP BY e.JOB_ID HAVING e.JOB_ID = (SELECT JOB_ID FROM hr.jobs AS j WHERE JOB_TITLE = cargo);
 
 END $$ DELIMITER ;
-
-CALL buscar_media_por_cargo('Programmer');
