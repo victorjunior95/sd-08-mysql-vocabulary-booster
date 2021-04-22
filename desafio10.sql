@@ -6,4 +6,4 @@ FROM w3schools.products AS Products
 INNER JOIN w3schools.order_details AS Order_Details ON Products.ProductID = Orders_Details.ProductID
 GROUP BY Products.ProductID
 HAVING 'Média' > 20
-ORDER BY 'Média', Produto;
+ORDER BY `Média`, Produto;
