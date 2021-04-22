@@ -62,7 +62,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
+  describe.only("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
     it("Verifica o desafio 4", async () => {
       const challengeQuery = readFileSync("desafio4.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult4");
@@ -106,7 +106,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe.only("12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**", () => {
+  describe("12 - Faça um relatório que lista todas as pessoas funcionárias **que possuem o mesmo cargo**", () => {
     it("Verifica o desafio 12", async () => {
       const challengeQuery = readFileSync("desafio12.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult12");
