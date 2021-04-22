@@ -7,4 +7,4 @@ INNER JOIN w3schools.order_details ord
 ON ord.productid = prod.productid
 GROUP BY prod.productid
 HAVING Média > 20.00
-ORDER BY ord.quantity, prod.productname;
+ORDER BY ROUND(AVG(ord.quantity), 2), prod.productname;
