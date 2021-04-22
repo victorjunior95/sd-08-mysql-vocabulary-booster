@@ -12,10 +12,10 @@
 SELECT ProductName AS Produto,
 MIN(Quantity) AS Mínima,
 MAX(Quantity) AS Máxima,
-CAST(ROUND(AVG(Quantity), 2) AS CHAR) AS Média
+ROUND(AVG(Quantity), 2) AS Média
 FROM w3schools.products AS w3products
 INNER JOIN w3schools.order_details AS w3orderdetails
 ON w3products.ProductID = w3orderdetails.ProductID
 GROUP BY w3products.ProductID
-HAVING CAST(AVG(w3orderdetails.Quantity) AS float) > 20
+HAVING Média > 20.00
 ORDER BY Média, Produto;
