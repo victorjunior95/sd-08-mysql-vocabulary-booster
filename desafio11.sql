@@ -1,4 +1,3 @@
-SELECT * FROM w3schools.customers;
 SELECT
 t1.ContactName AS "Nome",
 t1.Country AS "País",
