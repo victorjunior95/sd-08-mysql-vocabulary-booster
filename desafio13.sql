@@ -1,6 +1,5 @@
 -- 13 - Exibe todos produtos que já tiveram um pedido associado requerindo uma quantidade desse
 -- produto maior que 80
--- w3schools
 -- 	Monte uma query que exiba 02 colunas:
 -- 		a) A primeira deve possuir o alias "Produto" e exibir o nome do produto.
 -- 		b) A segunda deve possuir o alias "Preço" e exibir o preço desse produto.
