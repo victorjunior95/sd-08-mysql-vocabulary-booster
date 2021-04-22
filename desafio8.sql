@@ -11,4 +11,4 @@ SELECT (
 OrderDate AS `Data do pedido`
 FROM w3schools.orders
 HAVING `Empresa que fez o envio` IN('Speedy Express', 'United Package')
-ORDER BY `Nome de contato`, `Empresa que fez o envio`;
+ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
