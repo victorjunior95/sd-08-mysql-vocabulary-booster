@@ -10,7 +10,7 @@ USE w3schools;
 
 DELIMITER $$
 CREATE TRIGGER inserir_data_a_nova_ordem
-AFTER INSERT ON w3schools.orders
+AFTER INSERT ON orders
 FOR EACH ROW
 BEGIN
 SET NEW.OrderDate = NOW();
