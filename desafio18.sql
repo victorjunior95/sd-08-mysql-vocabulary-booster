@@ -6,4 +6,4 @@ FROM hr.employees AS e
 INNER JOIN hr.job_history AS jh
 ON jh.Employee_ID = e.Employee_ID
 GROUP BY `Nome completo`, `Data de início`, `Data de rescisão`, `Anos trabalhados`
-ORDER BY CONCAT(e.first_name, ' ', e.last_name);
+ORDER BY `Nome completo`, `Anos trabalhados`;
