@@ -7,4 +7,5 @@ INNER JOIN
 (SELECT Country, COUNT(*) AS 'total'
 FROM w3schools.customers 
 GROUP BY Country) b ON a.Country = b.Country
+WHERE (b.`total` - 1) != 0
 ORDER BY a.CustomerName;
