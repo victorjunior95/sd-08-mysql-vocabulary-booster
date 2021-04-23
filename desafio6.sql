@@ -13,4 +13,4 @@ FROM
     hr.jobs AS jobs ON job_history.JOB_ID = jobs.JOB_ID
         INNER JOIN
     hr.departments AS departments ON job_history.DEPARTMENT_ID = departments.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC , `Cargo` ASC;
+ORDER BY `Nome completo` DESC , `Cargo`;
