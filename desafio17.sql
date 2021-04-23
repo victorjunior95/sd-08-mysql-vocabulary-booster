@@ -3,9 +3,7 @@ CREATE TRIGGER ordersInsert
 BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 BEGIN
-SET NEW.OrderDate = NOW(),
-NEW.CustomerID = 'INSERT',
-NEW.EmployeeID = 'INSERT',
-NEW.ShipperID = 'INSERT';
+SET NEW.OrderDate = NOW();
+INSERT INTO w3schools.orders VALUES(NEW.CustomerID, NEW.EmployeeID, NEW.ShipperID);
 END $$
 DELIMITER ;
