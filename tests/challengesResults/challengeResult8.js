@@ -642,4 +642,3 @@ const challengeResult8 = [
 ];
 
 module.exports = challengeResult8;
-console.log(challengeResult8.length)
