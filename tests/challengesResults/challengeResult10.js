@@ -290,3 +290,5 @@ const challengeResult10 = [
 ];
 
 module.exports = challengeResult10;
+console.log(challengeResult10.length)
+
