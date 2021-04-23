@@ -7,7 +7,9 @@ ELSE 'CEO'
 END AS 'Senioridade'
 FROM hr.jobs c
 INNER JOIN (
-SELECT job_id, AVG(salary) AS 'Média'
+SELECT job_id, ROUND(AVG(salary), 2) AS 'Média'
 FROM hr.employees
 GROUP BY job_id
-) f ON c.job_id = f.job_id;
+) f ON c.job_id = f.job_id
+ORDER BY f.`Média`, c.job_title;
+
