@@ -12,4 +12,3 @@ FROM hr.employees
 GROUP BY job_id
 ) f ON c.job_id = f.job_id
 ORDER BY f.`Média`, c.job_title;
-
