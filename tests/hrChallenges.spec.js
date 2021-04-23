@@ -62,7 +62,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe.only("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
+  describe("4 - Exiba a média salarial e o nível de senioridade de todas as pessoas empregadas, agrupadas pelo cargo", () => {
     it("Verifica o desafio 4", async () => {
       const challengeQuery = readFileSync("desafio4.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult4");
@@ -117,7 +117,7 @@ describe("Desafios iniciais", () => {
     });
   });
 
-  describe("15 - Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo", () => {
+  describe.only("15 - Crie uma procedure chamada `buscar_media_por_cargo` que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo", () => {
     it("Verifica o desafio 15", async () => {
       const challengeQuery = readFileSync("desafio15.sql", "utf8").trim();
       const createProcedureQuery = /CREATE PROCEDURE.*END/is.exec(
