@@ -4,7 +4,7 @@ FROM hr.employees employ
 INNER JOIN hr.job_history jhistory
 ON employ.employee_id = jhistory.employee_id
 INNER JOIN hr.jobs jobs
-ON employ.job_id = jobs.job_id
+ON jhistory.job_id = jobs.job_id
 INNER JOIN hr.departments depart
-ON employ.department_id = depart.department_id
+ON jhistory.department_id = depart.department_id
 ORDER BY `Nome completo` DESC, `Cargo`;
