@@ -1,4 +1,4 @@
-select  CONCAT(upper(e.FIRST_NAME ),upper(' '), upper(e.LAST_NAME)) as 'Nome completo',
+select  upper(CONCAT(e.FIRST_NAME ,' ',e.LAST_NAME)) as 'Nome completo',
 j.JOB_TITLE as 'Cargo',
 h.START_DATE as 'Data de início',
 e.SALARY AS 'Salário'
