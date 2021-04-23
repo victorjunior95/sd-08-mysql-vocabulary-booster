@@ -1,3 +1,5 @@
+# Requisitos do Projeto:
+
 - [X] 1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa
 - [X] 2 - Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo
 - [X] 3 - Exiba os cargos com a diferença entre seus salários máximo e mínimo
@@ -18,6 +20,8 @@
 - [ ] 18 - Faça um relatório que mostra o histórico de cargos das pessoas empregadas, mostrando as datas de início e de saída, assim como os anos que ela ficou nesse cargo
 - [ ] 19 - Crie uma função chamada exibir_quantidade_pessoas_contratadas_por_mes_e_ano no banco de dados hr que, dados o mês e ano como parâmetros nessa ordem, retorna a quantidade de pessoas funcionárias que foram contratadas nesse mês e ano
 - [ ] 20 - Toda pessoa funcionária no banco hr possui um histórico completo de cargos.
+
+
 ### Termos e acordos
 
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
