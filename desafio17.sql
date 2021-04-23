@@ -1,0 +1,14 @@
+USE w3schools;
+
+DROP TRIGGER IF EXISTS OnOrdersInsert;
+
+DELIMITER $
+
+CREATE TRIGGER OnOrdersInsert
+  BEFORE INSERT ON orders
+  FOR EACH ROW
+BEGIN
+  SET NEW.OrderDate = NOW();
+END $
+
+DELIMITER ;
