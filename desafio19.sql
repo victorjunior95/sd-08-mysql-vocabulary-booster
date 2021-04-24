@@ -4,8 +4,8 @@ DELIMITER $$
 CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes INT, ano INT)
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE quantidade INT;
-	SELECT 
+  DECLARE quantidade INT;
+  SELECT 
     COUNT(EMPLOYEE_ID)
 FROM
     hr.employees
