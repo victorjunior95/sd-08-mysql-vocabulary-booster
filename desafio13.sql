@@ -1,5 +1,5 @@
 SELECT
-    tb_prd.ProductName, tb_prd.Price
+    tb_prd.ProductName AS 'Produto', tb_prd.Price AS 'Preço'
 FROM
     w3schools.products AS tb_prd
         INNER JOIN
