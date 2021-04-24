@@ -1,5 +1,5 @@
 SELECT countries.COUNTRY_NAME AS 'País',
-SELECT 
+SELECT
     countries.COUNTRY_NAME AS 'País',
     IF(regions.REGION_NAME = 'Europe',
         'incluído',
