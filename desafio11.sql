@@ -4,5 +4,5 @@ INNER JOIN w3schools.customers AS c2
 ON c1.country = c2.country
 AND
 c1.contactName <> c2.contactName
-GROUP BY `Nome`, `País`
+GROUP BY c1.contactName, `País`
 ORDER BY `Nome`;
