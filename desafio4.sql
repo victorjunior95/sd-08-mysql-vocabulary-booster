@@ -1,4 +1,4 @@
-SELECT 
+SELECT
     hr_j.JOB_TITLE AS 'Cargo',
     ROUND(AVG(hr_e.SALARY), 2) AS 'Média salarial',
     CASE
@@ -24,4 +24,4 @@ FROM
         INNER JOIN
     hr.employees hr_e ON hr_j.JOB_ID = hr_e.JOB_ID
 GROUP BY hr_j.JOB_TITLE
-ORDER BY `Média salarial` , hr_j.JOB_TITLE;
+ORDER BY `Média salarial` , `Cargo`;
