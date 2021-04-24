@@ -13858,3 +13858,4 @@ const challengeResult12 = [
 ];
 
 module.exports = challengeResult12;
+console.log(challengeResult12.length)
