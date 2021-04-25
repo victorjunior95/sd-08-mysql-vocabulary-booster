@@ -7,3 +7,4 @@ BEGIN
 SET NEW.OrderDate = NOW();
 END $$
 DELIMITER ;
+
