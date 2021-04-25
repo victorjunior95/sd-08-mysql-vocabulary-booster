@@ -7,5 +7,3 @@ SELECT COUNT(e1.HIRE_DATE) FROM hr.employees AS e1 WHERE YEAR(e1.HIRE_DATE) = an
 RETURN quantidade;
 
 END $$ DELIMITER ;
-
--- Teste pull
