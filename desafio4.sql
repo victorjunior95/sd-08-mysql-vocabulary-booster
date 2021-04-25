@@ -12,4 +12,4 @@ FROM
         INNER JOIN
     hr.employees E ON J.job_id = E.job_id
 GROUP BY J.job_id
-ORDER BY ROUND(AVG(salary), 2) , job_title;
+ORDER BY AVG(E.salary) , job_title;
