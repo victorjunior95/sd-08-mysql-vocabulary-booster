@@ -1,4 +1,4 @@
-/* Desafio7.SQL */
+/* -- Desafio7.SQL */
 
 SELECT
 UCASE(CONCAT(tbE.FIRST_NAME, ' ', tbE.LAST_NAME)) 'Nome completo',

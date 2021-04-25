@@ -1,4 +1,4 @@
-/* Desafio6.SQL */
+/* -- Desafio6.SQL */
 
 SELECT 
 CONCAT(tbE.FIRST_NAME, ' ', tbE.LAST_NAME) 'Nome completo',
