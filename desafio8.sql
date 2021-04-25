@@ -10,5 +10,6 @@ sub.`OrderDate` AS 'Data do pedido'
   ON o.CustomerID = c.CustomerID
   INNER JOIN  w3schools.shippers AS s
   ON o.ShipperID = s.ShipperID
+  WHERE o.ShipperID in (1,2)
   ) AS sub
   ORDER BY 1,2,3;

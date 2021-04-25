@@ -1,1 +1,1 @@
-SELECT * FROM w3schools.products;
+-- SELECT * FROM w3schools.products;
