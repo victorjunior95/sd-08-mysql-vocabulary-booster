@@ -7,6 +7,4 @@ inner join (SELECT * FROM hr.jobs) as j on j.JOB_ID = e.JOB_ID where j.JOB_TITLE
 group by j.JOB_TITLE ;
 END
 $$ DELIMITER ;
-
-CALL buscar_media_por_cargo('Programmer');
-
+-- CALL buscar_media_por_cargo('Programmer');
