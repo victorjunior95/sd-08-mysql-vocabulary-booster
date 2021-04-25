@@ -10,4 +10,3 @@ WHERE j.job_title = cargo;
 END $$
 
 DELIMITER ;
-

@@ -14,4 +14,3 @@ RETURN quantidade;
 END $$
 
 DELIMITER ;
-
