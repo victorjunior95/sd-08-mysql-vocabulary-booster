@@ -1,11 +1,11 @@
 SELECT 
-    JOB_TITLE,
+    job_title,
     CASE
-        WHEN MAX_SALARY BETWEEN 5000 AND 10000 THEN 'Baixo'
-        WHEN MAX_SALARY BETWEEN 10001 AND 20000 THEN 'Médio'
-        WHEN MAX_SALARY BETWEEN 20001 AND 30000 THEN 'Alto'
+        WHEN max_salary BETWEEN 5000 AND 10000 THEN 'Baixo'
+        WHEN max_salary BETWEEN 10001 AND 20000 THEN 'Médio'
+        WHEN max_salary BETWEEN 20001 AND 30000 THEN 'Alto'
         ELSE 'Altíssimo'
     END AS 'Nível'
 FROM
     hr.jobs
-ORDER BY JOB_TITLE;
+ORDER BY job_title;
