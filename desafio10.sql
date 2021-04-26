@@ -3,4 +3,3 @@ INNER JOIN w3schools.products AS p ON p.ProductID = o.ProductID
 GROUP BY `Produto`
 HAVING `Média` > 20
 ORDER BY `Média`,`Produto`;
-
