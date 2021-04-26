@@ -1,6 +1,6 @@
 DELIMITER $$
 
-CREATE TRIGGER current_date
+CREATE TRIGGER insert_current_date
 BEFORE INSERT ON w3schools.orders
 FOR EACH ROW
 
