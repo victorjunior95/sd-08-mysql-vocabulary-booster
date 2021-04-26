@@ -13,5 +13,3 @@ ON p.ProductID = od.ProductID
 GROUP BY p.ProductID) AS Sub
 WHERE Média > 20
 ORDER BY 4,1;
-
-
