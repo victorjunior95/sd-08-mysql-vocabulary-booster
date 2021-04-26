@@ -8,7 +8,7 @@ DECLARE quantidadeDeEmpregos INT;
 SELECT COUNT(*) FROM hr.job_history jhistory
 INNER JOIN hr.employees employee
 ON jhistory.EMPLOYEE_ID = employee.EMPLOYEE_ID
-WHERE EMAIL = email 
+WHERE employee.EMAIL = email 
 INTO quantidadeDeEmpregos
 RETURN quantidadeDeEmpregos
 END $$
