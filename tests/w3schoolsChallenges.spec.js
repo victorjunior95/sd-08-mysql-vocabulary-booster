@@ -40,7 +40,7 @@ xdescribe("Desafios iniciais", () => {
     });
   });
 
-  describe.only("9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos", () => {
+  describe("9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos", () => {
     it("Verifica o desafio 9", async () => {
       const challengeQuery = readFileSync("desafio9.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult9");
@@ -62,7 +62,7 @@ xdescribe("Desafios iniciais", () => {
     });
   });
 
-  describe("11 - Exibe todas as pessoas clientes **que possuem compatriotas**, mostrando a quantidade de compatriotas para cada pessoa cliente", () => {
+  describe.only("11 - Exibe todas as pessoas clientes **que possuem compatriotas**, mostrando a quantidade de compatriotas para cada pessoa cliente", () => {
     it("Verifica o desafio 11", async () => {
       const challengeQuery = readFileSync("desafio11.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult11");
