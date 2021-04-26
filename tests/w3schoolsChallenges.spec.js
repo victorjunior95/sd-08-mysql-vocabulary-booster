@@ -26,7 +26,7 @@ describe('Desafios iniciais', () => {
   });
 
   afterAll(async () => {
-    await sequelize.query('DROP DATABASE w3schools;', { type: 'RAW' });
+    // await sequelize.query('DROP DATABASE w3schools;', { type: 'RAW' });
 
     sequelize.close();
   });
