@@ -8,6 +8,8 @@
 -- A quarta coluna deve possuir o alias "Anos trabalhados" e exibir, usando como base as datas de saída e entrada, os anos que a pessoa ficou no cargo em questão, arredondados para duas casas decimais.
 -- Os resultados devem estar ordenados pelo nome completo das pessoas empregadas em ordem alfabética. Em caso de empate no nome completo, ordene os resultados pelos anos trabalhados por ela no cargo em questão, em ordem crescente.
 
+-- Reference: http://jquerydicas.blogspot.com/2013/11/mysql-diferenca-entre-datas.html
+
 SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
 DATE_FORMAT(hrjobhist.START_DATE, '%d/%m/%Y') AS `Data de início`,
 DATE_FORMAT(hrjobhist.END_DATE, '%d/%m/%Y') AS `Data de rescisão`,
