@@ -13,7 +13,7 @@ INNER JOIN hr.departments AS dep
 ON dep.DEPARTMENT_ID = hist.DEPARTMENT_ID
 INNER JOIN hr.jobs AS jobs
 ON jobs.JOB_ID = hist.JOB_ID
-WHERE E.EMAIL = 'NKOCHHAR'
+WHERE emp.EMAIL = 'NKOCHHAR'
 ORDER BY `Cargo`;
 END $
 
