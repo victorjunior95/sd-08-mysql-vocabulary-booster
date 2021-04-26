@@ -10,8 +10,8 @@ SELECT COUNT(*) FROM job_history jhistory
 INNER JOIN employees employee
 ON jhistory.EMPLOYEE_ID = employee.EMPLOYEE_ID
 WHERE employee.EMAIL = emailDoFuncionario
-INTO quantidadeDeEmpregos
-RETURN quantidadeDeEmpregos
+INTO quantidadeDeEmpregos;
+RETURN quantidadeDeEmpregos;
 END $$
 
 DELIMITER ;
