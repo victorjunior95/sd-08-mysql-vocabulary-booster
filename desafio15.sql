@@ -1,0 +1,1 @@
+CALL buscar_média_por_Cargo('Programmer');
