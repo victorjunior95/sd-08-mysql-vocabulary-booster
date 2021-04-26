@@ -7,4 +7,3 @@ WHEN MAX_SALARY >= 30001 THEN 'Altíssimo'
 ELSE 'NÃO CLASSIFICADO'
 END AS Nível
   FROM hr.jobs ORDER BY Cargo;
-
