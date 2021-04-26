@@ -11,7 +11,7 @@ CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes INT, ano
 RETURNS INT READS SQL DATA
 BEGIN
 DECLARE pessoas_empregadas INT;
-SELECT COUNT(*) FROM hr.employees WHERE DATE_FORMAT(HIRE_DATE, "%m/%Y") = CONCAT(LPAD(@mes, 2, 0), "/", @ano)
+SELECT COUNT(*) FROM hr.employees WHERE DATE_FORMAT(HIRE_DATE, "%m/%Y") = CONCAT(LPAD(mes, 2, 0), "/", ano)
 INTO pessoas_empregadas;
 RETURN pessoas_empregadas;
 END
