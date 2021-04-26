@@ -16,8 +16,8 @@
 -- SELECT AS País, AS 'Status Inclusão' FROM 
 -- SELECT * FROM regions;
 SELECT 
-    COUNTRY_NAME AS País,
-    IF(REGION_ID = 1,
+    COUNTRY_NAME AS 'País',
+    IF(region_id = 1,
         'incluído',
         'não incluído') AS 'Status Inclusão'
 FROM
