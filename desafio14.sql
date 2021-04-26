@@ -1,10 +1,10 @@
 SELECT 
-    c.Country AS `País`
+    Country AS 'País'
 FROM
-    w3schools.customers AS c,
-    w3schools.suppliers AS s
-WHERE
-    c.Country <> s.Country
-GROUP BY `País`
+    w3schools.suppliers 
+UNION SELECT 
+    Country AS 'País'
+FROM
+    w3schools.customers
 ORDER BY `País`
 LIMIT 5;
