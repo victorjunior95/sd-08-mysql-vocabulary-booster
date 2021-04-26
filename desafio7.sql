@@ -4,4 +4,4 @@ e.SALARY AS 'Salário'
 from hr.employees as e
 inner join hr.jobs as j on j.JOB_ID = e.JOB_ID 
 inner join hr.job_history  as h on h.EMPLOYEE_ID = e.EMPLOYEE_ID where month(START_DATE) in (01, 02, 03)
-order by `Nome completo`,'Data de início';
+order by `Nome completo`,`Data de início`;
