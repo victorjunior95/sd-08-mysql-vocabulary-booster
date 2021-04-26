@@ -6,8 +6,8 @@ RETURNS INT READS SQL DATA
 
 BEGIN
 DECLARE quantidadeDeEmpregos INT;
-SELECT COUNT(*) FROM hr.job_history jhistory
-INNER JOIN hr.employees employee
+SELECT COUNT(*) FROM job_history jhistory
+INNER JOIN employees employee
 ON jhistory.EMPLOYEE_ID = employee.EMPLOYEE_ID
 WHERE employee.EMAIL = emailDoFuncionario
 INTO quantidadeDeEmpregos
