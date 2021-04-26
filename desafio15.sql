@@ -1,1 +1,1 @@
-CALL buscar_média_por_Cargo('Programmer');
+CALL buscar_média_por_cargo('Programmer');
