@@ -26,3 +26,14 @@
 -- A terceira deve possuir o alias "Número de compatriotas" e exibir o número de pessoas que moram no mesmo país.
 
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
+
+-- SELECT * FROM w3schools.customers;
+
+SELECT 
+  T1.ContactName AS Nome,
+  T1.Country AS País,
+  COUNT(T1.Country)-1 AS 'Número de compatriotas'
+FROM w3schools.customers AS T1, w3schools.customers AS T2
+WHERE T1.Country = T2.Country
+GROUP BY Nome, País
+ORDER BY Nome;
