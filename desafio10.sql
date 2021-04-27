@@ -8,7 +8,7 @@
 -- A quarta deve deve possuir o alias "Média" e exibir a média de quantidade nos pedidos deste produto, arredondada para duas casas decimais.
 -- Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente.
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
--- SELECT * FROM w3schools.products;
+SELECT * FROM w3schools.products;
 -- SELECT * FROM w3schools.order_details;
 
 SELECT P.ProductName AS 'Produto',
