@@ -1,12 +1,3 @@
-SELECT JOBS.JOB_TITLE AS "Cargo"
-FROM hr.jobs AS JOBS;
-
-SELECT EMPLOYEES.JOB_ID AS 'Cargo',
-ROUND(AVG(SALARY), 2) AS `Média salarial`
-FROM hr.employees AS EMPLOYEES
-GROUP BY JOB_ID
-ORDER BY `Média salarial`;
-
 SELECT JOBS.JOB_TITLE AS "Cargo",
 ROUND(AVG(SALARY), 2) AS `Média salarial`,
 CASE
