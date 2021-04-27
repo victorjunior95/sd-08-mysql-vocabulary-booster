@@ -7,7 +7,7 @@ SELECT
   dep.DEPARTMENT_NAME AS "Departamento",
   job.JOB_TITLE AS "Cargo"
   FROM hr.employees AS employee
-  INNER JOIN hr.jobs AS jhistory
+  INNER JOIN hr.employee AS jhistory
   ON employee.EMPLOYEE_ID = jhistory.EMPLOYEE_ID
   INNER JOIN hr.jobs AS job
   ON job.JOB_ID = jhistory.JOB_ID
