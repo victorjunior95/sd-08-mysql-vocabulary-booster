@@ -1,0 +1,24 @@
+DELIMITER $$
+CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(100))
+RETURNS INT READS SQL DATA
+BEGIN
+DECLARE qntDeEmpregos INT;
+SELECT 
+    COUNT(*)
+FROM
+    hr.job_history
+WHERE
+    EXISTS( SELECT 
+            *
+        FROM
+            hr.employees
+        WHERE
+            hr.employees.EMPLOYEE_ID = hr.job_history.EMPLOYEE_ID
+                AND hr.employees.EMAIL = email) INTO qntDeEmpregos;
+
+RETURN qntDeEmpregos;
+END 
+$$
+DELIMITER ;
+
+SELECT BUSCAR_QUANTIDADE_DE_EMPREGOS_POR_FUNCIONARIO('NKOCHHAR');
