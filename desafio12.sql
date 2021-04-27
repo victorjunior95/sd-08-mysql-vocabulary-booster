@@ -1,5 +1,5 @@
 SELECT CONCAT(emp1.first_name, ' ', emp1.last_name) AS 'Nome completo funcionário 1',
-emp1.salry AS 'Salário funcionário 1',
+emp1.salary AS 'Salário funcionário 1',
 emp1.phone_umber AS 'Telefone funcionário 1',
 CONCAT(emp2.first_name, ' ', emp2.last_name) AS 'Nome completo funcionário 2',
 emp2.salry AS 'Salário funcionário 2',
