@@ -14,7 +14,7 @@ SELECT
   INNER JOIN hr.departments AS dep
   ON dep.DEPARTMENT_ID = jhistory.DEPARTMENT_ID
   WHERE Email = employeeEmail
-  ORDER BY 3, 2  
+  ORDER BY 3, 2; -- esqueci o ponto e vírgula
 END
 $$ DELIMITER ;
 
