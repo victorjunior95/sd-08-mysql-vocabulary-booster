@@ -17,3 +17,5 @@ SELECT
   ORDER BY 3, 2  
 END
 $$ DELIMITER ;
+
+CALL exibir_historico_completo_por_funcionario('NKOCHHAR');
