@@ -1,15 +1,28 @@
--- 9 - Exibe todos as pessoas funcionárias que já realizaram algum pedido, mostrando também seu total de pedidos feitos
--- Exiba todas as pessoas funcionárias que já realizaram algum pedido e o total dos pedidos feitos.
+-- 11 - Exibe todas as pessoas clientes que possuem compatriotas, mostrando a quantidade de compatriotas para cada pessoa cliente
+-- Exiba todas as pessoas clientes que possuem compatriotas.
+
 -- Use o banco w3schools como referência
--- Monte uma query que exiba 02 colunas:
--- A primeira deve possuir o alias "Nome completo" e exibir o nome completo da pessoa funcionária (não se esqueça do espaço entre o nome e o sobrenome).
--- A segunda deve possuir o alias "Total de pedidos" e exibir a quantidade total de pedidos feitos pela pessoa.
--- Ordene seus resultados pelo total de pedidos em ordem crescente.
--- SELECT * FROM w3schools.employees;
--- SELECT * FROM w3schools.orders;
-SELECT CONCAT(E.FirstName, ' ', E.LastName) AS 'Nome completo',
-    COUNT(*) AS 'Total de pedidos'
-FROM w3schools.employees AS E
-    INNER JOIN w3schools.orders AS O ON O.EmployeeID = E.EmployeeID
-GROUP BY `Nome completo`
-ORDER BY `Total de pedidos`;
+
+-- Mostre a quantidade de compatriotas para cada pessoa cliente.
+
+-- Suponha que haja apenas 04 clientes:
+
+-- Maria, do Brasil.
+
+-- João, do Brasil.
+
+-- Gabriela, do Brasil.
+
+-- Alex, da Irlanda.
+
+-- Logo, podemos dizer que Maria, João e Gabriela são compatriotas entre si, haja visto que as três pessoas moram no Brasil. Além disso, podemos dizer que tanto Maria quanto João e Gabriela possuem duas pessoas compatriotas associadas. Já Alex não possui compatriota, haja visto que não há outras pessoas da Irlanda.
+
+-- Monte uma query que exiba 03 colunas:
+
+-- A primeira deve possuir o alias "Nome" e exibir o nome de contato da pessoa cliente.
+
+-- A segunda deve possuir o alias "País" e exibir o nome do país em que a pessoa reside.
+
+-- A terceira deve possuir o alias "Número de compatriotas" e exibir o número de pessoas que moram no mesmo país.
+
+-- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
