@@ -514,7 +514,7 @@ Monte uma query que exiba 06 colunas:
 
 Os resultados devem estar ordenados pela coluna "**Nome completo funcionário 1**" em ordem alfabética.
 
-Em caso de empate, os resultados devem ser ordenados pela coluna **Nome completo funcionário 2**" em ordem alfabética.
+Em caso de empate, os resultados devem ser ordenados pela coluna "**Nome completo funcionário 2**" em ordem alfabética.
 
 ---
 
