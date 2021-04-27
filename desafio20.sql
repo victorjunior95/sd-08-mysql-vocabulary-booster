@@ -1,7 +1,8 @@
 USE hr;
 DELIMITER $$
-CREATE PROCEDURE exibir_historico_completo_por_funcionario (IN employeeEmail VARCHAR(50))
+CREATE PROCEDURE exibir_historico_completo_por_funcionario(IN employeeEmail VARCHAR(50))
 BEGIN
+SELECT
   CONCAT(employee.FIRST_NAME, ' ', employee.LAST_NAME) AS `Nome completo`,
   dep.DEPARTMENT_NAME AS "Departamento",
   job.JOB_TITLE AS "Cargo"
