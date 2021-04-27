@@ -1,7 +1,7 @@
 USE hr;
 DELIMITER $$
 
-CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes VARCHAR(5), ano VARCHAR(5)
+CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes VARCHAR(20), ano VARCHAR(20))
 RETURNS INT READS SQL DATA
 BEGIN
   DECLARE quantidade_de_contratados INT;
