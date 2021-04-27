@@ -1,3 +1,6 @@
+-- Refeência e ajuda das colagas Ana Karine: https://github.com/tryber/sd-08-mysql-vocabulary-booster/tree/ana-karine-mysql-vocabulary-booster
+-- e Rita RitaJeveaux: https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/26
+
 SELECT 
     CONCAT(UCASE(e.FIRST_NAME),
             ' ',
