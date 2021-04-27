@@ -1,5 +1,3 @@
-SELECT * FROM w3schools.orders;
-
 SELECT CONCAT(EMPLOYEES.FirstName, " ", EMPLOYEES.LastName) AS `Nome completo`,
 COUNT(*) AS `Total de pedidos`
 FROM w3schools.orders AS ORDERS
