@@ -8,5 +8,5 @@ ON Emp.employee_id = Jh.employee_id
 INNER JOIN hr.jobs AS `Jb`
 ON Jh.job_id = Jb.job_id
 INNER JOIN hr.departments AS `Dp`
-ON Emp.department_id = Dp.department_id
+ON Jh.department_id = Dp.department_id
 ORDER BY `Nome completo` DESC, `Cargo`;
