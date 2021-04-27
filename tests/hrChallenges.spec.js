@@ -26,7 +26,7 @@ describe('Desafios iniciais', () => {
   });
 
   afterAll(async () => {
-    await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
+    // await sequelize.query('DROP DATABASE hr;', { type: 'RAW' });
 
     sequelize.close();
   });
@@ -40,7 +40,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('2 - Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo', () => {
+  describe.only('2 - Exiba os cargos com seu nível de renumeração associado, com base no salário máximo do cargo', () => {
     it('Verifica o desafio 2', async () => {
       const challengeQuery = readFileSync('desafio2.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult2');

@@ -1,25 +1,35 @@
--- 1 - Exiba os países e indicando se cada um deles se encontra ou não na região formada pela Europa
--- Crie uma query que mostre se o país pertence ou não à região "Europe".
+-- 2 - Exiba os cargos com seu nível de renumeração associado, com base no salário 
+-- máximo do cargo
+-- Categorize o nível de remuneração de cada cargo.
 
 -- Use o banco hr como referência
 
--- Seu relatório deve apresentar 02 colunas:
+-- Seu relatório deve possuir as seguintes colunas:
 
--- A primeira deve possuir o alias "País" e exibir o nome do país.
+-- A primeira deve possuir o alias "Cargo" e exibir o nome do cargo.
 
--- A segunda deve possuir o alias "Status Inclusão" e 
--- deve exibir "incluído" se o país em questão está incluso em "Europe", 
--- ou "não incluído", caso contrário.
+-- A segunda deve possuir o alias "Nível" e exibir o nível de remuneração
+--  do cargo com base no seu salário máximo, categorizando os níveis de remuneração
+-- da seguinte forma:
 
--- Os resultados devem estar ordenados pelo nome do país em ordem alfabética.
+-- Salário máximo entre 5000 e 10000 arrow_right Baixo
 
--- SELECT AS País, AS 'Status Inclusão' FROM 
--- SELECT * FROM regions;
+-- Salário máximo entre 10001 e 20000 arrow_right Médio
+
+-- Salário máximo entre 20001 e 30000 arrow_right Alto
+
+-- Salário máximo acima de 30000 arrow_right Altíssimo
+
+-- Os resultados devem estar ordenados pelo nome do cargo em ordem alfabética.
+-- SELECT * FROM jobs;
 SELECT 
-    COUNTRY_NAME AS 'País',
-    IF(region_id = 1,
-        'incluído',
-        'não incluído') AS 'Status Inclusão'
+    JOB_TITLE AS Cargo,
+    (CASE
+        WHEN MAX_SALARY <= 10000 THEN 'Baixo'
+		WHEN MAX_SALARY <= 20000 THEN 'Médio'
+		WHEN MAX_SALARY <= 30000 THEN 'Alto'
+        ELSE 'Altíssimo'
+    END) AS Nível
 FROM
-    hr.countries
-ORDER BY COUNTRY_NAME;
+    hr.jobs
+ORDER BY JOB_TITLE;
