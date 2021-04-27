@@ -8,16 +8,15 @@
 -- A quarta deve deve possuir o alias "Média" e exibir a média de quantidade nos pedidos deste produto, arredondada para duas casas decimais.
 -- Os resultados devem estar ordenados pela média de quantidade nos pedidos em ordem crescente.
 -- Em caso de empate na média, os resultados devem ser ordenados pelo nome do produto em ordem alfabética.
-SELECT * FROM w3schools.products;
+-- SELECT * FROM w3schools.products;
 -- SELECT * FROM w3schools.order_details;
 
-SELECT P.ProductName AS 'Produto',
-  MIN(O.Quantity) AS 'Mínima',
-  MAX(O.Quantity) AS 'Máxima',
-  ROUND(AVG(O.Quantity), 2) AS 'Média'
+SELECT P.ProductName AS Produto,
+  MIN(O.Quantity) AS Mínima,
+  MAX(O.Quantity) AS Máxima,
+  ROUND(AVG(O.Quantity), 2) AS Média
 FROM w3schools.products AS P
   INNER JOIN w3schools.order_details AS O ON P.ProductID = O.ProductID
 GROUP BY Produto
 HAVING Média > 20
-ORDER BY `Média`,
-  `Produto`;
+ORDER BY Média, Produto;
