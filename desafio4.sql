@@ -35,4 +35,4 @@ GROUP BY
   (jobs.JOB_TITLE)
   ORDER BY `Média`, jobs.JOB_TITLE;
   /* requisito feito com o Auxílio de Arnaelcio Gomes */
-
+  
