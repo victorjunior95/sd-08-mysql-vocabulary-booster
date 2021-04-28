@@ -7,7 +7,7 @@
 -- Chamando-a dessa forma, sua procedure deve retornar 5760.00 como média salarial para pessoas que ocupam o cargo "Programmer".
 USE hr;
 DELIMITER $$ CREATE PROCEDURE buscar_media_por_cargo(IN Cargo VARCHAR(100)) BEGIN
-SELECT ROUND(AVG(E.SALARY), 2) AS 'Média salarial'
+SELECT ROUND(AVG(E.SALARY), 2) AS 'Média Salarial'
 FROM hr.employees AS E
   INNER JOIN hr.jobs AS J ON E.JOB_ID = J.JOB_ID
 WHERE J.JOB_TITLE = Cargo;
