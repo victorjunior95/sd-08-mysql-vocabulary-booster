@@ -1,4 +1,4 @@
- /*Referência paara uso do BEFORE:
+  /*Referência paara uso do BEFORE:
 You cannot change a table while the INSERT trigger is firing. The INSERT might do some locking which could result in a deadlock.
  Also, updating the table from a trigger would then cause the same trigger to fire again in an infinite recursive loop.
   Both of these reasons are why MySQL prevents you from doing this.
