@@ -10,4 +10,7 @@ Triggers também são procedimentos PL/SQL armazenados.
  Esses eventos estão relacionados a comandos insert, update ou delete. 
  Por exemplo, podemos associar uma trigger ao evento insert de uma tabela.
   Sempre que um registro for inserido nesta tabela, o código da trigger será executado, automaticamente.
-   Uma trigger pode chamar uma stored procedure, que por sua vez pode chamar outra stored procedure.*/
+   Uma trigger pode chamar uma stored procedure, que por sua vez pode chamar outra stored procedure.
+   fonte :
+   https://www.devmedia.com.br/stored-procedures-e-triggers-no-oracle-artigo-sql-magazine-03/7629 */
+   
