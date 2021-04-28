@@ -1,13 +1,12 @@
-DELIMITER $$
-CREATE FUNCTION exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes TINYINT, ano SMALLINT)
-RETURNS SMALLINT READS SQL DATA
-BEGIN
-  DECLARE total SMALLINT;
-  SELECT COUNT(*) FROM hr.employees
-  WHERE YEAR(HIRE_DATE) = ano AND MONTH(HIRE_DATE) = mes
-  INTO total;
-  RETURN total;
-END $$
-DELIMITER ;
+delimiter $$
+create function exibir_quantidade_pessoas_contratadas_por_mes_e_ano(mes int, ano int)
+returns int reads sql data
+begin
+declare total int;
+select count(*) from (select * from employees
+where month(hire_date)=mes and year(hire_date) = ano) into total;
+return total;
+end $$
+delimiter ;
 
-SELECT exibir_quantidade_pessoas_contratadas_por_mes_e_ano(6, 1987);
+select exibir_quantidade_pessoas_contratadas_por_mes_e_ano(6, 1987);
