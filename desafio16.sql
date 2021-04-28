@@ -1,15 +1,14 @@
--- 15 - Crie uma procedure chamada buscar_media_por_cargo que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo
--- Crie uma procedure chamada buscar_media_por_cargo que recebe como parâmetro o nome de um cargo e em retorno deve mostrar a média salarial de todas as pessoas que possuem esse cargo.
--- Sua procedure deve retornar somente 01 coluna com o alias "Média salarial", que mostra a média salarial arredondada para duas casas decimais.
+-- 16 - Crie uma função chamada buscar_quantidade_de_empregos_por_funcionario no banco de dados hr que, ao receber o email de uma pessoa funcionária, retorne a quantidade de empregos presentes em seu histórico
+-- Crie uma função chamada buscar_quantidade_de_empregos_por_funcionario que, ao receber o email de uma pessoa funcionária, retorne a quantidade de empregos presentes em seu histórico.
 -- Use o banco hr como referência
--- Confirme a execução correta da procedure chamando-a e passando o nome de cargo igual a "Programmer":
--- CALL buscar_media_por_cargo('Programmer');
--- Chamando-a dessa forma, sua procedure deve retornar 5760.00 como média salarial para pessoas que ocupam o cargo "Programmer".
+-- Confirme que sua função retorna o valor 2 ao ser chamada passando uma pessoa funcionária cujo email é "NKOCHHAR".
 USE hr;
-DELIMITER $$ CREATE PROCEDURE buscar_media_por_cargo(IN Cargo VARCHAR(100)) BEGIN
-SELECT ROUND(AVG(E.SALARY), 2) AS 'Média Salarial'
+DELIMITER $$ CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(500)) RETURNS INT READS SQL DATA BEGIN
+DECLARE Hitorico INT;
+SELECT COUNT(*)
 FROM hr.employees AS E
-  INNER JOIN hr.jobs AS J ON E.JOB_ID = J.JOB_ID
-WHERE J.JOB_TITLE = Cargo;
+  INNER JOIN hr.job_history AS H ON E.EMPLOYEE_ID = H.EMPLOYEE_ID
+WHERE E.EMAIL = email INTO Hitorico;
+RETURN Hitorico;
 END $$ DELIMITER;
-CALL buscar_media_por_cargo('Programmer');
+SELECT BUSCAR_QUANTIDADE_DE_EMPREGOS_POR_FUNCIONARIO('NKOCHHAR');
