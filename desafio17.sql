@@ -7,9 +7,10 @@
 -- Retomando que não é necessário incluir as queries para INSERIR e SELECIONAR, elas já vão ser executadas automaticamente pelo próprio teste.
 USE w3schools;
 DELIMITER $$ CREATE TRIGGER testeTrigger BEFORE
-INSERT ON w3schools FOR EACH ROW BEGIN
+INSERT ON orders FOR EACH ROW BEGIN
 SET NEW.CustomerID = 4,
   NEW.EmployeeID = 2,
+  NEW.OrderDate = NOW(),
   NEW.ShipperID = 2;
 END $$ DELIMITER;
 SELECT *
