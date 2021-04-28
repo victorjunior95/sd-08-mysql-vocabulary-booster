@@ -1,5 +1,6 @@
 DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
+    /* VARCHAR aceita caracteres, e o numero é  a especificação de quantos */
 BEGIN
 SELECT 
     ROUND(SUM(employees.SALARY) / COUNT(employees.JOB_ID), 2) AS 'Média salarial'
@@ -15,4 +16,3 @@ DELIMITER ;
     /* Adaptado do PR de Arnaelcio Gomes
   https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files, 
   e com seu auxílio para compreenção. */
-  
