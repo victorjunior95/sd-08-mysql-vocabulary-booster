@@ -8,4 +8,3 @@ INNER JOIN w3schools.customers AS c
 ON c.CustomerID = o.CustomerID
 WHERE s.ShipperName = 'Speedy Express' OR s.ShipperName = 'United Package'
 ORDER BY `Nome de contato`, `Empresa que fez o envio`, `Data do pedido`;
-
