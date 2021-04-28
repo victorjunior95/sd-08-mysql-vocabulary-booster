@@ -14,5 +14,4 @@ HAVING `Média` > 20
 ORDER BY `Média` , `Produto`;
     /* Adaptado do PR de Arnaelcio Gomes
   https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files */
-
   
