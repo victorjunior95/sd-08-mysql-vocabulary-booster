@@ -4,7 +4,7 @@ DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(100))
 RETURNS INT READS SQL DATA
 BEGIN
-	DECLARE empregos INT;
+    DECLARE empregos INT;
     SELECT COUNT(*)
     FROM employees AS e
     INNER JOIN job_history AS jb
