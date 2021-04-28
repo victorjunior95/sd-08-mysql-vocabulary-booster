@@ -1,3 +1,6 @@
+    /* Adaptado do PR de Arnaelcio Gomes
+  https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files, 
+  e com seu auxílio para compreenção. */
 DELIMITER $$
 CREATE PROCEDURE buscar_media_por_cargo(IN cargo VARCHAR(100))
     /* VARCHAR aceita caracteres, e o numero é  a especificação de quantos */
@@ -12,7 +15,3 @@ WHERE jobs.JOB_TITLE  = cargo ;
 END
 $$
 DELIMITER ;
-
-    /* Adaptado do PR de Arnaelcio Gomes
-  https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files, 
-  e com seu auxílio para compreenção. */
