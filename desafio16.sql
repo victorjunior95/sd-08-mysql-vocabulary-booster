@@ -1,3 +1,6 @@
+    /* Adaptado do PR de Arnaelcio Gomes
+  https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files, 
+  e com seu auxílio para compreenção. */
 SELECT * FROM hr.job_history;DELIMITER $$
 CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(email VARCHAR(100))
 RETURNS INT READS SQL DATA
@@ -20,7 +23,3 @@ RETURN qntDeEmpregos;
 END 
 $$
 DELIMITER ;
-    /* Adaptado do PR de Arnaelcio Gomes
-  https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files, 
-  e com seu auxílio para compreenção. */
-  
