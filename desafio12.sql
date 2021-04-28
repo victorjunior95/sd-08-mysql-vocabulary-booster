@@ -18,6 +18,5 @@ GROUP BY `Nome completo funcionário 1`,
   `Salário funcionário 2`, 
   `Telefone funcionário 2`
 ORDER BY `Nome completo funcionário 1` , `Nome completo funcionário 2`;
-    /* Trecho retirado do PR de Arnaelcio Gomes
+    /* Adaptado do PR de Arnaelcio Gomes
   https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files */
-  
