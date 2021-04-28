@@ -32,6 +32,7 @@ FROM
   hr.employees 
   INNER JOIN hr.jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
 GROUP BY 
-  (employees.JOB_ID)
+  (jobs.JOB_TITLE)
   ORDER BY `Média`, jobs.JOB_TITLE;
   /* requisito feito com o Auxílio de Arnaelcio Gomes */
+
