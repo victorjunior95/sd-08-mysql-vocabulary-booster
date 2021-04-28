@@ -33,4 +33,5 @@ FROM
   INNER JOIN jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
 GROUP BY 
   (employees.JOB_ID);
+  ORDER BY (ROUND(SUM(e.SALARY) / COUNT(e.JOB_ID), 2));
   /* requisito feito com o Auxílio de Arnaelcio Gomes */
