@@ -58,7 +58,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe('11 - Exibe todas as pessoas clientes **que possuem compatriotas**, mostrando a quantidade de compatriotas para cada pessoa cliente', () => {
+  describe.only('11 - Exibe todas as pessoas clientes **que possuem compatriotas**, mostrando a quantidade de compatriotas para cada pessoa cliente', () => {
     it('Verifica o desafio 11', async () => {
       const challengeQuery = readFileSync('desafio11.sql', 'utf8').trim();
       const expectedResult = require('./challengesResults/challengeResult11');
@@ -85,7 +85,7 @@ describe('Desafios iniciais', () => {
     });
   });
 
-  describe.only('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
+  describe('17 - Crie uma TRIGGER que, a cada nova inserção realizada na tabela `orders`, insira automaticamente a data atual na coluna `OrderDate`', () => {
     it('Verifica o desafio 17', async () => {
       const challengeQuery = readFileSync("desafio17.sql", "utf8").trim();
       const expectedResult = require("./challengesResults/challengeResult17");
