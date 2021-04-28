@@ -8,6 +8,4 @@ GROUP BY
   order_details.Quantity 
 HAVING 
   order_details.Quantity > 80 
-ORDER BY 
-  Produto;
-  
+ORDER BY Produto;
