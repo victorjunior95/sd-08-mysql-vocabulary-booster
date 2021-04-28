@@ -19,8 +19,8 @@ SELECT T1.ContactName AS 'Nome',
   COUNT(T1.Country) AS 'Número de compatriotas'
 FROM w3schools.customers AS T1,
   w3schools.customers AS T2
-WHERE T1.ContactName = T2.ContactName
-  AND T1.Country <> T2.Country
+WHERE T1.ContactName <> T2.ContactName
+  AND T1.Country = T2.Country
 GROUP BY `Nome`,
   `País`
 ORDER BY `Nome`;
