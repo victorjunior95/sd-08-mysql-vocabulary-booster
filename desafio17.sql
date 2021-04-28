@@ -1,7 +1,7 @@
 SELECT
 (
   SELECT CONCAT(hre.FIRST_NAME, ' ', hre.LAST_NAME) FROM hr.employees AS hre
-  WHERE hre.employee_id = jh.EMPLOYEE_ID
+  WHERE hre.employee_id = hrjh.EMPLOYEE_ID
 ) AS `Nome completo`,
 DATE_FORMAT(hrjh.START_DATE, '%d/%m/%Y') AS "Data de início",
 DATE_FORMAT(hrjh.END_DATE, '%d/%m/%Y') AS "Data de rescisão",
