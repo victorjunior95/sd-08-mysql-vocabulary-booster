@@ -12,6 +12,6 @@ GROUP BY order_details.ProductID
 HAVING `Média` > 20
   /* https://www.w3schools.com/sql/sql_having.asp */
 ORDER BY `Média` , `Produto`;
+
     /* Adaptado do PR de Arnaelcio Gomes
   https://github.com/tryber/sd-08-mysql-vocabulary-booster/pull/54/files */
-  
