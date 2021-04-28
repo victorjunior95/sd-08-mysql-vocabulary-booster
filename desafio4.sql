@@ -4,7 +4,7 @@ SELECT
   ROUND(
     SUM(employees.SALARY)/ COUNT(employees.JOB_ID), 
     2
-  ) AS MÉDIA, 
+  ) AS 'Média salarial', 
   CASE WHEN (
     ROUND(
       SUM(employees.SALARY)/ COUNT(employees.JOB_ID), 
@@ -28,7 +28,7 @@ SELECT
       SUM(employees.SALARY)/ COUNT(employees.JOB_ID), 
       2
     ) <= 10500
-  ) THEN 'Sênior' ELSE 'CEO' END AS TIPO 
+  ) THEN 'Sênior' ELSE 'CEO' END AS 'Senioridade'
 FROM 
   hr.employees 
   INNER JOIN hr.jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
