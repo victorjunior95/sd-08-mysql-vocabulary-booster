@@ -34,4 +34,5 @@ FROM
   INNER JOIN hr.jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
 GROUP BY 
   (jobs.JOB_TITLE)
-  ORDER BY `Média`, jobs.JOB_TITLE;
+  ORDER BY `Média salarial`, jobs.JOB_TITLE;
+  
