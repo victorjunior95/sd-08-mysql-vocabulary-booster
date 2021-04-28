@@ -12,7 +12,7 @@ FROM
 WHERE
     MONTH(HIRE_DATE) = hireMonth
         AND YEAR(HIRE_DATE) = hireYear INTO HiredEmployees;
-		RETURN HiredEmployees;
+RETURN HiredEmployees;
 END $$
 
 DELIMITER ;
