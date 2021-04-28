@@ -30,8 +30,8 @@ SELECT
   ) THEN 'Sênior' ELSE 'CEO' END AS TIPO 
 FROM 
   hr.employees 
-  INNER JOIN jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
+  INNER JOIN hr.jobs AS jobs ON employees.JOB_ID = jobs.JOB_ID 
 GROUP BY 
   (employees.JOB_ID)
-  ORDER BY `Média`
+  ORDER BY `Média`, jobs.JOB_TITLE;
   /* requisito feito com o Auxílio de Arnaelcio Gomes */
