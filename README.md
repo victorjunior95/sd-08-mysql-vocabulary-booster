@@ -246,7 +246,7 @@ MYSQL_USER=root MYSQL_PASSWORD= HOSTNAME=localhost npm test
 
 Crie uma query que mostre se o país pertence ou não à região `"Europe"`.
 
-> Use o banco `hr` como referência 
+> Use o banco `hr` como referência
 
 Seu relatório deve apresentar 02 colunas:
 
