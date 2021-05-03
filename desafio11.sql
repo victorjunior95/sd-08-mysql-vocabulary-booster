@@ -13,11 +13,12 @@
 -- A segunda deve possuir o alias "País" e exibir o nome do país em que a pessoa reside.
 -- A terceira deve possuir o alias "Número de compatriotas" e exibir o número de pessoas que moram no mesmo país.
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
-SELECT t1.ContactName as Nome,
-t1.Country as País,
-COUNT(t2.Country)-1 AS 'Número de compatriotas'
-FROM w3schools.customers AS t1, w3schools.customers AS t2
-HERE t1.Country = t2.Country
-GROUP BY t1.ContactName, t1.Country
-Having `Número de compatriotas` > 0
-ORDER BY Nome;
+SELECT ctms1.ContactName 'Nome', ctms1.Country 'País', `Número de compatriotas` FROM w3schools.customers ctms1
+RIGHT JOIN
+(
+SELECT COUNT(*) - 1 'Número de compatriotas', Country FROM w3schools.customers
+GROUP BY Country
+HAVING `Número de compatriotas` > 0
+) ctms2
+ON ctms1.Country = ctms2.Country
+ORDER BY `Nome`;
