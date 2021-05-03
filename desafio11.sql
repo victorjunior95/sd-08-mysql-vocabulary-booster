@@ -15,9 +15,9 @@
 -- Os resultados devem estar ordenados pelo nome de contato da pessoa cliente em ordem alfabética.
 SELECT t1.ContactName as Nome,
 t1.Country as País,
-COUNT(t2.Country)-1 as 'Número de compatriotas'
-FROM w3schools.customers as t1, w3schools.customers as t2
-where t1.Country = t2.Country
+COUNT(t2.Country)-1 AS 'Número de compatriotas'
+FROM w3schools.customers AS t1, w3schools.customers AS t2
+HERE t1.Country = t2.Country
 GROUP BY t1.ContactName, t1.Country
 Having `Número de compatriotas` > 0
-Order by Nome;
+ORDER BY Nome;
