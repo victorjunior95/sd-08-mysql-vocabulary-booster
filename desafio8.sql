@@ -1,4 +1,4 @@
-SELECT ContactName AS 'Nome do contato',
+SELECT ContactName AS 'Nome de contato',
 CASE
 WHEN ShipperID = 1 THEN 'Speedy Express'
 WHEN ShipperID = 2 THEN 'United Package'

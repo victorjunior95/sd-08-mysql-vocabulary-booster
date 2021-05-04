@@ -1,4 +1,4 @@
-SELECT concat(FirstName, ' ', LastName) AS 'Nome Completo',
+SELECT concat(FirstName, ' ', LastName) AS 'Nome completo',
 Quantity AS 'Total de pedidos' 
 FROM w3schools.orders AS O
 INNER JOIN w3schools.employees AS E
