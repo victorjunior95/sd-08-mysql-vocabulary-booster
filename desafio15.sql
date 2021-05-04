@@ -2,8 +2,8 @@ USE hr;
 DELIMITER $$
 
 CREATE PROCEDURE buscar_media_por_cargo(
-	IN nome_cargo VARCHAR(50),
-    OUT media_salarial DOUBLE
+IN nome_cargo VARCHAR(50),
+OUT media_salarial DOUBLE
 )
 BEGIN
 	SELECT Mj.JOB_TITLE AS Cargo,
