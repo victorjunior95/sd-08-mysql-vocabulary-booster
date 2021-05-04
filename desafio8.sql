@@ -10,4 +10,4 @@ FROM
     w3schools.shippers AS s ON o.ShipperID = s.ShipperID
 WHERE
     s.ShipperID IN (1 , 2)
-ORDER BY c.CustomerName , s.ShipperName , o.OrderDate;
+ORDER BY c.ContactName , s.ShipperName , o.OrderDate;
