@@ -6,4 +6,5 @@ FROM w3schools.order_details AS OD
 INNER JOIN w3schools.products AS P
 ON P.ProductID = OD.ProductID
 GROUP BY ProductName
+HAVING Média > 20.00
 ORDER BY Média, Produto;
