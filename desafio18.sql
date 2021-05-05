@@ -8,4 +8,3 @@ FROM
         INNER JOIN
     hr.employees AS e ON j.EMPLOYEE_ID = e.EMPLOYEE_ID
 ORDER BY `Nome completo` , `Anos trabalhados`;
-    
