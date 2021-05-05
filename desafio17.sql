@@ -5,8 +5,7 @@ CREATE TRIGGER inserirDataDeHoje
   AFTER INSERT ON orders
   FOR EACH ROW
 BEGIN
-    INSERT INTO orders (OrderDate)
-    VALUES (CURRENT_DATE());
+    SET NEW.OrderDate = CURRENT_DATE();
 END $$
 
 DELIMITER ;
