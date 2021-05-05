@@ -1,19 +1,12 @@
-USE hr;
-DELIMITER $$
+USE w3schools;
 
-CREATE FUNCTION buscar_quantidade_de_empregos_por_funcionario(employeeEmail VARCHAR(50))
-RETURNS INT READS SQL DATA
+DELIMITER $$
+CREATE TRIGGER nome_do_trigger
+  AFTER INSERT ON orders
+  FOR EACH ROW
 BEGIN
-DECLARE jobs_count INT;
-SELECT 
-    COUNT(j.JOB_ID)
-FROM
-    hr.job_history AS j
-        INNER JOIN
-    hr.employees AS e ON e.EMPLOYEE_ID = j.EMPLOYEE_ID
-WHERE
-    employeeEmail = e.EMAIL INTO jobs_count;
-RETURN jobs_count;
+	INSERT INTO orders (OrderDate)
+    VALUES (CURRENT_DATE());
 END $$
 
 DELIMITER ;
