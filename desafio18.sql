@@ -1,13 +1,10 @@
 /*RESPOSTA VIA STACKOVERFLOW
 https://pt.stackoverflow.com/questions/247070/como-formatar-data-e-hora-do-mysql-para-o-formato-brasileiro-em-php*/
-
 SELECT
   CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) AS `Nome Completo`,
   DATE_FORMAT(h.START_DATE, '%d/%m/%Y') AS `Data de início`,
   DATE_FORMAT(h.END_DATE, '%d/%m/%Y') AS `Data de recisão`,
-  ROUND(
-    (DATEDIFF(h.END_DATE, h.START_DATE)) / 365, 2
-  ) AS `Anos trabalhados`
+  ROUND((DATEDIFF(h.END_DATE, h.START_DATE)) / 365, 2) AS `Anos trabalhados`
   FROM hr.job_history AS h
   INNER JOIN hr.employees AS e
   WHERE h.EMPLOYEE_ID = e.EMPLOYEE_ID
