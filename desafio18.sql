@@ -17,7 +17,7 @@ SELECT
     LPAD(MONTH(job_history.END_DATE), 2, 0),
     '/',
     YEAR(job_history.END_DATE)
-  ) AS `Data de recisão`,
+  ) AS `Data de rescisão`,
   ROUND(
     DATEDIFF(job_history.END_DATE, job_history.START_DATE) / 365, 2)
   AS `Anos trabalhados`
