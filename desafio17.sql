@@ -1,0 +1,6 @@
+DELIMITER $$
+CREATE TRIGGER insert_on_OrderDate BEFORE INSERT ON orders FOR EACH ROW
+BEGIN
+SET NEW.OrderDate = DATE(now());
+END $$
+DELIMITER ;
