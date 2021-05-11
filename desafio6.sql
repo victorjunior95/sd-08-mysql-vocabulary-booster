@@ -4,13 +4,13 @@ SELECT
     hty.START_DATE AS "Data de início do cargo",
     dep.DEPARTMENT_NAME AS "Departamento"
 FROM
-    hr.employees AS employ
+    hr.job_history AS hty
         INNER JOIN
-    hr.jobs AS job ON employ.JOB_ID = job.JOB_ID
+    hr.employees AS employ ON hty.EMPLOYEE_ID = employ.EMPLOYEE_ID
         INNER JOIN
-    hr.job_history AS hty ON job.JOB_ID = hty.JOB_ID
+    hr.jobs AS job ON hty.JOB_ID = job.JOB_ID
         INNER JOIN
-    DEPARTMENT_NAME AS dep
+    hr.departments AS dep
 WHERE
     dep.DEPARTMENT_ID = hty.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC , `Cargo`;	
+ORDER BY `Nome completo` DESC , `Cargo`;
