@@ -1,4 +1,4 @@
-SELECT 
+SELECT 	
     pdts.ProductName AS "Produto",
     MIN(ordd.Quantity) AS "Mínima",
     MAX(ordd.Quantity) AS "Máxíma",
@@ -10,5 +10,5 @@ FROM
 WHERE
     pdts.ProductID = ordd.ProductID
 GROUP BY `Produto`
-HAVING `Média` > 20.00
+HAVING `Média` > 20.00	
 ORDER BY `Média` , `Produto`;
