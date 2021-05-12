@@ -1,12 +1,12 @@
 SELECT
   (
     SELECT CONCAT(employees.FIRST_NAME, ' ', employees.LAST_NAME)
-	  FROM hr.employees
+    FROM hr.employees
     WHERE employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
   ) AS `Nome completo`,
   (
     SELECT jobs.JOB_TITLE
-	  FROM hr.jobs
+    FROM hr.jobs
     WHERE jobs.JOB_ID = job_history.JOB_ID
   ) AS Cargo,
   START_DATE AS `Data de início do cargo`,
@@ -14,5 +14,5 @@ SELECT
     SELECT departments.DEPARTMENT_NAME
 	  FROM hr.departments
 	  WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
-	) AS Departamento
+  ) AS Departamento
 FROM hr.job_history;
