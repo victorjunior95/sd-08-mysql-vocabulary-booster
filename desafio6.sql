@@ -12,7 +12,7 @@ SELECT
   START_DATE AS `Data de início do cargo`,
   (
     SELECT departments.DEPARTMENT_NAME
-	  FROM hr.departments
-	  WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
+    FROM hr.departments
+    WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
   ) AS Departamento
 FROM hr.job_history;
