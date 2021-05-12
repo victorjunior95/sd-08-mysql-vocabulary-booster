@@ -10,5 +10,5 @@ FROM
 WHERE
     pdts.ProductID = ordd.ProductID
 GROUP BY `Produto`
-HAVING `Média` > 20
+HAVING `Média` > 20.00
 ORDER BY `Média` , `Produto`;

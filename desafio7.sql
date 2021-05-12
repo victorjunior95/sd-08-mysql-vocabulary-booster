@@ -6,4 +6,5 @@ FROM
     hr.employees AS employ
         INNER JOIN
     hr.job_history AS hty ON employ.EMPLOYEE_ID = hty.EMPLOYEE_ID
+    WHERE MONTH(h.START_DATE) IN (1, 2, 3)
 ORDER BY `Nome completo` , `Data de início`;
