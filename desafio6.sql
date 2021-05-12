@@ -8,4 +8,5 @@ JOIN hr.jobs AS jobs
 ON employees.JOB_ID = jobs.JOB_ID
 JOIN hr.departments AS departments
 ON departments.DEPARTMENT_ID = employees.DEPARTMENT_ID
-ORDER BY `Nome completo` DESC, Cargo;
+GROUP BY EMPLOYEE_ID
+ORDER BY `Nome completo` DESC, Cargo ASC;
