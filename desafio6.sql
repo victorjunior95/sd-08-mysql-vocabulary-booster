@@ -1,19 +1,10 @@
 SELECT
-  (
-    SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME)
-    FROM hr.employees
-    WHERE employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
-  ) AS `Nome completo`,
-  (
-    SELECT JOB_TITLE
-    FROM hr.jobs
-    WHERE jobs.JOB_ID = job_history.JOB_ID
-  ) AS Cargo,
+  CONCAT(FIRST_NAME, ' ', LAST_NAME) AS `Nome completo`,
+  JOB_TITLE AS Cargo,
   START_DATE AS `Data de início do cargo`,
-  (
-    SELECT DEPARTMENT_NAME
-    FROM hr.departments
-    WHERE departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
-  ) AS Departamento
+  DEPARTMENT_NAME AS Departamento
 FROM hr.job_history
+JOIN hr.jobs ON jobs.JOB_ID = job_history.JOB_ID
+JOIN hr.employees ON employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID
+JOIN hr.departments ON departments.DEPARTMENT_ID = job_history.DEPARTMENT_ID
 ORDER BY `Nome completo` DESC, Cargo;
