@@ -1,0 +1,11 @@
+USE w3schools ;
+DELIMITER $$
+
+CREATE TRIGGER newDate
+BEFORE INSERT ON orders
+FOR EACH ROW 
+BEGIN
+SET NEW.OrderDate = NEW();
+END $$
+
+DELIMITER ; 
