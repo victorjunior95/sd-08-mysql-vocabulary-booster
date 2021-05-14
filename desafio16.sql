@@ -16,4 +16,3 @@ RETURN result;
 END $$
 
 DELIMITER ;
-
