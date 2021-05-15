@@ -3,7 +3,7 @@ SELECT
   Country AS País,
   (
     SELECT
-    COUNT(*) - 1
+      COUNT(*) - 1
     FROM w3schools.customers AS current
     WHERE customers.Country = current.Country
   ) AS `Número de compatriotas`
