@@ -7,5 +7,11 @@ SELECT
     FROM w3schools.customers AS current
     WHERE customers.Country = current.Country
   ) AS `Número de compatriotas`
-FROM w3schools.customers AS customers
+FROM customers
+WHERE (
+    SELECT
+      COUNT(*) - 1
+    FROM w3schools.customers AS current
+    WHERE customers.Country = current.Country
+  ) > 0
 ORDER BY Nome;
