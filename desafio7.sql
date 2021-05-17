@@ -12,4 +12,4 @@ WHERE
     MONTH(job_history.START_DATE) BETWEEN 1 AND 3
 ORDER BY CONCAT(employees.FIRST_NAME,
         ' ',
-        employees.LAST_NAME) ASC;
+        employees.LAST_NAME) ASC, job_history.START_DATE ASC;
