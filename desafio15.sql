@@ -3,8 +3,7 @@ DELIMITER $$
 
 CREATE PROCEDURE buscar_media_por_cargo(IN job VARCHAR(50))
 BEGIN
-	SELECT 
-    ROUND(AVG(employees.SALARY), 2) AS "Média salarial"
+SELECT ROUND(AVG(employees.SALARY), 2) AS 'Média salarial'
 FROM
     hr.employees AS employees
         INNER JOIN
