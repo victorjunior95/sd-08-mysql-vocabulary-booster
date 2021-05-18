@@ -5,6 +5,10 @@ SELECT
 FROM 
   w3schools.customers AS costumers1, 
   w3schools.customers AS costumers2
-WHERE costumers1.Country = costumers2.Country AND costumers1.CustomerID != costumers2.CustomerID
-GROUP BY costumers1.CustomerID
+WHERE 
+  costumers1.Country = costumers2.Country 
+AND 
+  costumers1.CustomerID != costumers2.CustomerID
+GROUP BY 
+  costumers1.CustomerID
 ORDER BY Nome;
